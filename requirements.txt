@@ -1,0 +1,18 @@
+# Fichier requirements.txt
+
+# Gestion de l'environnement
+poetry
+
+# Linting
+flake8
+
+# Formatters
+isort
+black
+
+# Typage statique
+mypy
+
+# Tests
+pytest
+pytest-cov
