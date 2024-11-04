@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+seaborn
+python-dotenv
+scikit-learn
+tensorflow
+tf-keras
+transformers
+huggingface-hub
+ipykernel

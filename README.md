@@ -24,23 +24,24 @@ clap-ai-core/
 
 ## Setup
 
-...🚧
-Kernel : choose Python 3.x
-
 ```bash
-# lauch Virtual Env
-cd /back/API
+# ativer le virtual env à la racine du projet
 python -m venv env
 source env/Scripts/activate
 
-# Install Dependencies
+# installer les lib
 pip install -r requirements.txt
 
-# Start Project
+# deactivate env
+deactivate
+
+# start API 🚧 
 python app.py
+
 ```
 
-...🚧
+**Pour executer un fichier \*.ipynb**    
+-> choisir le Kernel env(Python 3.11.x) -> env/Scripts/python.exe
 
 ### Contribuer
 
