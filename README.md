@@ -15,9 +15,12 @@ clap-ai-core/
 └── requirements.txt  # Liste des lib nécessaires pour exécuter le projet
 ```
 
-## Prerequis
+## Prérequis
 
 - Python ≥ 3.11
+- install git lfs\* on your machine -> https://git-lfs.com/
+
+> \* Filtre les \*.h5 pour les stocker sur un server lsf
 
 ## Setup
 
