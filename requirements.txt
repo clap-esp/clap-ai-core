@@ -11,3 +11,5 @@ huggingface-hub
 ipykernel
 torch==2.5.1
 torchaudio==2.5.1
+librosa==0.10.2.post1
+moviepy==1.0.3
