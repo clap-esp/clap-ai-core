@@ -1,0 +1,846 @@
+[
+    {
+        "time_start": 0.0,
+        "time_end": 4.0,
+        "text": "OK",
+        "words": [ "OK" ],
+        "labels": [ "O" ]
+    },
+    {
+        "time_start": 4.0,
+        "time_end": 8.0,
+        "text": "bienvenue tout le monde dans ce talk devenez développeur senior",
+        "words": [ "bienvenue","tout","le","monde","dans","ce","talk","devenez","développeur","senior" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 8.0,
+        "time_end": 12.0,
+        "text": "non seulement 20 minutes je vais me présenter",
+        "words": [ "non","seulement","20","minutes","je","vais","me","présenter" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 12.0,
+        "time_end": 16.0,
+        "text": "mets-moi c'est Claude Saint-Georges je suis passionné du code depuis",
+        "words": [ "mets","-","moi","c","'","est","Claude","Saint","-","Georges","je","suis","passionné","du","code","depuis" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 16.0,
+        "time_end": 20.0,
+        "text": "si je fais du Java depuis 10 ans d'entreprise",
+        "words": [ "si","je","fais","du","Java","depuis","10","ans","d","'","entreprise" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 20.0,
+        "time_end": 24.0,
+        "text": "depuis 6 ans et je travaille chez quitté",
+        "words": [ "depuis","6","ans","et","je","travaille","chez","quitté" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 24.0,
+        "time_end": 28.0,
+        "text": "avant de commencer je vous pose une question",
+        "words": [ "avant","de","commencer","je","vous","pose","une","question" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 28.0,
+        "time_end": 32.0,
+        "text": "combien de temps faut-il pour devenir développeur senior",
+        "words": [ "combien","de","temps","faut","-","il","pour","devenir","développeur","senior" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 32.0,
+        "time_end": 36.0,
+        "text": "qui dirait 20 minutes du coup",
+        "words": [ "qui","dirait","20","minutes","du","coup" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 36.0,
+        "time_end": 40.0,
+        "text": "qui dirait 5 ans plus ou moins",
+        "words": [ "qui","dirait","5","ans","plus","ou","moins" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 40.0,
+        "time_end": 44.0,
+        "text": "qui dirait bien plus OK",
+        "words": [ "qui","dirait","bien","plus","OK" ],
+        "labels": [ "O","O","O","O","O" ]
+    },
+    {
+        "time_start": 44.0,
+        "time_end": 48.0,
+        "text": "effectivement",
+        "words": [ "effectivement" ],
+        "labels": [ "O" ]
+    },
+    {
+        "time_start": 48.0,
+        "time_end": 52.0,
+        "text": "peu importe la pratique on dit qu'il faut à peu près 10 ans",
+        "words": [ "peu","importe","la","pratique","on","dit","qu","'","il","faut","à","peu","près","10","ans" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 52.0,
+        "time_end": 56.0,
+        "text": "pour développer une séniorité alors je",
+        "words": [ "pour","développer","une","séniorité","alors","je" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 56.0,
+        "time_end": 60.0,
+        "text": "quelques exemples ont dit Mozart par exemple c'était",
+        "words": [ "quelques","exemples","ont","dit","Mozart","par","exemple","c","'","était" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 60.0,
+        "time_end": 64.0,
+        "text": "prodige à 4 ans c'est peut-être vrai",
+        "words": [ "prodige","à","4","ans","c","'","est","peut","-","être","vrai" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 64.0,
+        "time_end": 68.0,
+        "text": "attendant pour qui développe les morceaux qu'on connaît de lui",
+        "words": [ "attendant","pour","qui","développe","les","morceaux","qu","'","on","connaît","de","lui" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 68.0,
+        "time_end": 72.0,
+        "text": "lui il aura fallu 13 ans de plus les Beatles pareil on dit qu'ils ont eu avec",
+        "words": [ "lui","il","aura","fallu","13","ans","de","plus","les","Beatles","pareil","on","dit","qu","'","ils","ont","eu","avec" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 72.0,
+        "time_end": 76.0,
+        "text": "succès instantané c'est faux ils ont passé 10",
+        "words": [ "succès","instantané","c","'","est","faux","ils","ont","passé","10" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 76.0,
+        "time_end": 80.0,
+        "text": "on démarre à Londres faire les tournées avant de connaître vraiment le succès",
+        "words": [ "on","démarre","à","Londres","faire","les","tournées","avant","de","connaître","vraiment","le","succès" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 80.0,
+        "time_end": 84.0,
+        "text": "bon du coup",
+        "words": [ "bon","du","coup" ],
+        "labels": [ "O","O","O" ]
+    },
+    {
+        "time_start": 84.0,
+        "time_end": 88.0,
+        "text": "j'ai proposé aux organisateurs de faire un toc de 10 ans mais bon ils m'ont dit non",
+        "words": [ "j","'","ai","proposé","aux","organisateurs","de","faire","un","toc","de","10","ans","mais","bon","ils","m","'","ont","dit","non" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 88.0,
+        "time_end": 92.0,
+        "text": "est-ce que je viens vous apporter du coup",
+        "words": [ "est","-","ce","que","je","viens","vous","apporter","du","coup" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 92.0,
+        "time_end": 96.0,
+        "text": "aujourd'hui c'est plus à apprendre à devenir développeur senior",
+        "words": [ "aujourd","'","hui","c","'","est","plus","à","apprendre","à","devenir","développeur","senior" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 96.0,
+        "time_end": 100.0,
+        "text": "et vous apporter des billes qui ont qui sont",
+        "words": [ "et","vous","apporter","des","billes","qui","ont","qui","sont" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 100.0,
+        "time_end": 104.0,
+        "text": "monte dans mon parcours et qui m'ont accompagné dans l'app",
+        "words": [ "monte","dans","mon","parcours","et","qui","m","'","ont","accompagné","dans","l","'","app" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 104.0,
+        "time_end": 108.0,
+        "text": "continue à m'accompagner dans l'apprentissage à maintenir une",
+        "words": [ "continue","à","m","'","accompagner","dans","l","'","apprentissage","à","maintenir","une" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 108.0,
+        "time_end": 112.0,
+        "text": "mets la sécurité et qui sont articulés autour de deux axes",
+        "words": [ "mets","la","sécurité","et","qui","sont","articulés","autour","de","deux","axes" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 112.0,
+        "time_end": 116.0,
+        "text": "la passion et le partage",
+        "words": [ "la","passion","et","le","partage" ],
+        "labels": [ "O","O","O","O","O" ]
+    },
+    {
+        "time_start": 116.0,
+        "time_end": 120.0,
+        "text": "encore on va commencer par la passion",
+        "words": [ "encore","on","va","commencer","par","la","passion" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 120.0,
+        "time_end": 124.0,
+        "text": "en lui disant c'est long en disant",
+        "words": [ "en","lui","disant","c","'","est","long","en","disant" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 124.0,
+        "time_end": 128.0,
+        "text": "parcours vaut mieux être passionné quand même",
+        "words": [ "parcours","vaut","mieux","être","passionné","quand","même" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 128.0,
+        "time_end": 132.0,
+        "text": "quand on est passionné",
+        "words": [ "quand","on","est","passionné" ],
+        "labels": [ "O","O","O","O" ]
+    },
+    {
+        "time_start": 132.0,
+        "time_end": 136.0,
+        "text": "on y met de l'émotion",
+        "words": [ "on","y","met","de","l","'","émotion" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 136.0,
+        "time_end": 140.0,
+        "text": "investi sa personnalité",
+        "words": [ "investi","sa","personnalité" ],
+        "labels": [ "O","O","O" ]
+    },
+    {
+        "time_start": 140.0,
+        "time_end": 144.0,
+        "text": "tout ça ça mène une chose quand même qui est mon premier point",
+        "words": [ "tout","ça","ça","mène","une","chose","quand","même","qui","est","mon","premier","point" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 144.0,
+        "time_end": 148.0,
+        "text": "faut trouver ça fun c'est important de trouver sa femme",
+        "words": [ "faut","trouver","ça","fun","c","'","est","important","de","trouver","sa","femme" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 148.0,
+        "time_end": 152.0,
+        "text": "si le code ça vous fait pas marrer les 10 ans ça va être",
+        "words": [ "si","le","code","ça","vous","fait","pas","marrer","les","10","ans","ça","va","être" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 152.0,
+        "time_end": 156.0,
+        "text": "et un autre point du coup également au travers de la passion",
+        "words": [ "et","un","autre","point","du","coup","également","au","travers","de","la","passion" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 156.0,
+        "time_end": 160.0,
+        "text": "investir son temps",
+        "words": [ "investir","son","temps" ],
+        "labels": [ "O","O","O" ]
+    },
+    {
+        "time_start": 160.0,
+        "time_end": 164.0,
+        "text": "ok on",
+        "words": [ "ok","on" ],
+        "labels": [ "O","O" ]
+    },
+    {
+        "time_start": 164.0,
+        "time_end": 168.0,
+        "text": "mets un petit peu conne s'il existe tout un tas de langage",
+        "words": [ "mets","un","petit","peu","conne","s","'","il","existe","tout","un","tas","de","langage" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 168.0,
+        "time_end": 172.0,
+        "text": "comme je vous l'ai dit au début",
+        "words": [ "comme","je","vous","l","'","ai","dit","au","début" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 172.0,
+        "time_end": 176.0,
+        "text": "j'ai commencé je me suis passionné pour le lève j'étais",
+        "words": [ "j","'","ai","commencé","je","me","suis","passionné","pour","le","lève","j","'","étais" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 176.0,
+        "time_end": 180.0,
+        "text": "je te soudeuse à l'époque",
+        "words": [ "je","te","soudeuse","à","l","'","époque" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 180.0,
+        "time_end": 184.0,
+        "text": "tomber sur un bouquin un bouquin de Pascal en fait j'ai appris le pas",
+        "words": [ "tomber","sur","un","bouquin","un","bouquin","de","Pascal","en","fait","j","'","ai","appris","le","pas" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","I-FIL","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 184.0,
+        "time_end": 188.0,
+        "text": "et puis j'ai appris que en fait faire du C",
+        "words": [ "et","puis","j","'","ai","appris","que","en","fait","faire","du","C" ],
+        "labels": [ "B-FIL","B-INT","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 188.0,
+        "time_end": 192.0,
+        "text": "[Bruit]",
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ]
+    },
+    {
+        "time_start": 192.0,
+        "time_end": 196.0,
+        "text": "[Bruit]",
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ]
+    },
+    {
+        "time_start": 196.0,
+        "time_end": 200.0,
+        "text": "pour autant j'ai arrêté en fait dans mes études du coup",
+        "words": [ "pour","autant","j","'","ai","arrêté","en","fait","dans","mes","études","du","coup" ],
+        "labels": [ "B-FIL","I-FIL","O","O","O","O","O","I-FIL","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 200.0,
+        "time_end": 204.0,
+        "text": "je peux voir des tas d'autres choses je me suis mis au final à la",
+        "words": [ "je","peux","voir","des","tas","d","'","autres","choses","je","me","suis","mis","au","final","à","la" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 204.0,
+        "time_end": 208.0,
+        "text": "mets Oscar au PHP au piton",
+        "words": [ "mets","Oscar","au","PHP","au","piton" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 208.0,
+        "time_end": 212.0,
+        "text": "j'ai appris des tas de langage qu'est-ce que",
+        "words": [ "j","'","ai","appris","des","tas","de","langage","qu","'","est","-","ce","que" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 212.0,
+        "time_end": 216.0,
+        "text": "m'a apporté ça m'a apporté la diversité",
+        "words": [ "m","'","a","apporté","ça","m","'","a","apporté","la","diversité" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 216.0,
+        "time_end": 220.0,
+        "text": "la diversité dans la syntaxe",
+        "words": [ "la","diversité","dans","la","syntaxe" ],
+        "labels": [ "O","O","O","O","O" ]
+    },
+    {
+        "time_start": 220.0,
+        "time_end": 224.0,
+        "text": "c'était dans les paradigmes apprendre à savoir sur un",
+        "words": [ "c","'","était","dans","les","paradigmes","apprendre","à","savoir","sur","un" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 224.0,
+        "time_end": 228.0,
+        "text": "l'application un autre prendre du recul aussi",
+        "words": [ "l","'","application","un","autre","prendre","du","recul","aussi" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 228.0,
+        "time_end": 232.0,
+        "text": "détacher un peu des langages découvrir qu'il y a des schémas",
+        "words": [ "détacher","un","peu","des","langages","découvrir","qu","'","il","y","a","des","schémas" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 232.0,
+        "time_end": 236.0,
+        "text": "qui qui ressort de tout ça je pense au design pattern par exemple",
+        "words": [ "qui","qui","ressort","de","tout","ça","je","pense","au","design","pattern","par","exemple" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 236.0,
+        "time_end": 240.0,
+        "text": "ça va beaucoup enrichi en fait donc apprenez différents langages",
+        "words": [ "ça","va","beaucoup","enrichi","en","fait","donc","apprenez","différents","langages" ],
+        "labels": [ "O","O","O","O","B-FIL","I-FIL","O","O","O","O" ]
+    },
+    {
+        "time_start": 240.0,
+        "time_end": 244.0,
+        "text": "j'entends dire",
+        "words": [ "j","'","entends","dire" ],
+        "labels": [ "O","O","O","O" ]
+    },
+    {
+        "time_start": 244.0,
+        "time_end": 248.0,
+        "text": "oui au début tu as dit ça fait 10 ans",
+        "words": [ "oui","au","début","tu","as","dit","ça","fait","10","ans" ],
+        "labels": [ "B-FIL","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 248.0,
+        "time_end": 252.0,
+        "text": "tu fais du Java en entreprise en fait alors oui c'est vrai",
+        "words": [ "tu","fais","du","Java","en","entreprise","en","fait","alors","oui","c","'","est","vrai" ],
+        "labels": [ "O","O","O","O","O","O","O","I-FIL","O","B-FIL","O","O","O","O" ]
+    },
+    {
+        "time_start": 252.0,
+        "time_end": 256.0,
+        "text": "au boulot à 95 % du temps je fais du Java",
+        "words": [ "au","boulot","à","95","%","du","temps","je","fais","du","Java" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 256.0,
+        "time_end": 260.0,
+        "text": "mais quand je fais la veille à côté quand chez moi pour le plaisir",
+        "words": [ "mais","quand","je","fais","la","veille","à","côté","quand","chez","moi","pour","le","plaisir" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 260.0,
+        "time_end": 264.0,
+        "text": "je fais autre chose que du Java justement",
+        "words": [ "je","fais","autre","chose","que","du","Java","justement" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 264.0,
+        "time_end": 268.0,
+        "text": "je vais chercher autre chose un autre cadre une autre stack",
+        "words": [ "je","vais","chercher","autre","chose","un","autre","cadre","une","autre","stack" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 268.0,
+        "time_end": 272.0,
+        "text": "choses importantes sortez du cadre professionnel",
+        "words": [ "choses","importantes","sortez","du","cadre","professionnel" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 272.0,
+        "time_end": 276.0,
+        "text": "découvrir d'autres outils",
+        "words": [ "découvrir","d","'","autres","outils" ],
+        "labels": [ "O","O","O","O","O" ]
+    },
+    {
+        "time_start": 276.0,
+        "time_end": 280.0,
+        "text": "les outils on va en parler",
+        "words": [ "les","outils","on","va","en","parler" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 280.0,
+        "time_end": 284.0,
+        "text": "au début moi je voulais être un puriste",
+        "words": [ "au","début","moi","je","voulais","être","un","puriste" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 284.0,
+        "time_end": 288.0,
+        "text": "il y a des gens qui ne jurent que par VIP",
+        "words": [ "il","y","a","des","gens","qui","ne","jurent","que","par","VIP" ],
+        "labels": [ "O","O","O","O","O","O","B-REP","O","O","O","O" ]
+    },
+    {
+        "time_start": 288.0,
+        "time_end": 292.0,
+        "text": "[Bruit]",
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ]
+    },
+    {
+        "time_start": 292.0,
+        "time_end": 296.0,
+        "text": "je vais être un puriste j'ai pas utilisé tous les outils que j'ai autour de moi",
+        "words": [ "je","vais","être","un","puriste","j","'","ai","pas","utilisé","tous","les","outils","que","j","'","ai","autour","de","moi" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 296.0,
+        "time_end": 300.0,
+        "text": "je me suis même dit je vais faire mon propre éditeur faire comme les grands",
+        "words": [ "je","me","suis","même","dit","je","vais","faire","mon","propre","éditeur","faire","comme","les","grands" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 300.0,
+        "time_end": 304.0,
+        "text": "lance la Richard Stallman can top song pour",
+        "words": [ "lance","la","Richard","Stallman","can","top","song","pour" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 304.0,
+        "time_end": 308.0,
+        "text": "minuteur c'était pire que bloc-notes",
+        "words": [ "minuteur","c","'","était","pire","que","bloc","-","notes" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 308.0,
+        "time_end": 312.0,
+        "text": "je me suis dit du coup je vais peut-être utiliser",
+        "words": [ "je","me","suis","dit","du","coup","je","vais","peut","-","être","utiliser" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 312.0,
+        "time_end": 316.0,
+        "text": "des idées sont pas que des usines à gaz",
+        "words": [ "des","idées","sont","pas","que","des","usines","à","gaz" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 316.0,
+        "time_end": 320.0,
+        "text": "peux-tu me tourner vers d'autres plugin je pense au Linder",
+        "words": [ "peux","-","tu","me","tourner","vers","d","'","autres","plugin","je","pense","au","Linder" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 320.0,
+        "time_end": 324.0,
+        "text": "je pense à sonar en fait c'est tout",
+        "words": [ "je","pense","à","sonar","en","fait","c","'","est","tout" ],
+        "labels": [ "O","O","O","O","B-FIL","I-FIL","O","O","O","O" ]
+    },
+    {
+        "time_start": 324.0,
+        "time_end": 328.0,
+        "text": "allume le boutique sont là et qui m'accompagne dans ma montée",
+        "words": [ "allume","le","boutique","sont","là","et","qui","m","'","accompagne","dans","ma","montée" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 328.0,
+        "time_end": 332.0,
+        "text": "mets danse sur le code appuyez-vous sur les outils ex",
+        "words": [ "mets","danse","sur","le","code","appuyez","-","vous","sur","les","outils","ex" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 332.0,
+        "time_end": 336.0,
+        "text": "donc ok on a vu différents langages différents",
+        "words": [ "donc","ok","on","a","vu","différents","langages","différents" ],
+        "labels": [ "B-FIL","I-FIL","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 336.0,
+        "time_end": 340.0,
+        "text": "les framework on va parler un peu des framework",
+        "words": [ "les","framework","on","va","parler","un","peu","des","framework" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 340.0,
+        "time_end": 344.0,
+        "text": "au début je me disais les frameworks pour les flemmards c'est pour",
+        "words": [ "au","début","je","me","disais","les","frameworks","pour","les","flemmards","c","'","est","pour" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 344.0,
+        "time_end": 348.0,
+        "text": "le système",
+        "words": [ "le","système" ],
+        "labels": [ "O","O" ]
+    },
+    {
+        "time_start": 348.0,
+        "time_end": 352.0,
+        "text": "application O2 sert à rien autant faire son propre système",
+        "words": [ "application","O2","sert","à","rien","autant","faire","son","propre","système" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 352.0,
+        "time_end": 356.0,
+        "text": "application je l'ai fait puis au boulot j'ai filé au",
+        "words": [ "application","je","l","'","ai","fait","puis","au","boulot","j","'","ai","filé","au" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 356.0,
+        "time_end": 360.0,
+        "text": "pour tester bon 5 minutes il m'a planté le truc il m'a envoyé mon",
+        "words": [ "pour","tester","bon","5","minutes","il","m","'","a","planté","le","truc","il","m","'","a","envoyé","mon" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 360.0,
+        "time_end": 364.0,
+        "text": "[Bruit]",
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ]
+    },
+    {
+        "time_start": 364.0,
+        "time_end": 368.0,
+        "text": "je me suis remis en question là-dessus je me suis dit bon j'ai peut-être l'IMP",
+        "words": [ "je","me","suis","remis","en","question","là","-","dessus","je","me","suis","dit","bon","j","'","ai","peut","-","être","l","'","IMP" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 368.0,
+        "time_end": 372.0,
+        "text": "bo2 au final ben j'ai j'ai appris ce que",
+        "words": [ "bo2","au","final","ben","j","'","ai","j","'","ai","appris","ce","que" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 372.0,
+        "time_end": 376.0,
+        "text": "mets système authentification à travers de ce framework sens",
+        "words": [ "mets","système","authentification","à","travers","de","ce","framework","sens" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 376.0,
+        "time_end": 380.0,
+        "text": "quand le réinventer",
+        "words": [ "quand","le","réinventer" ],
+        "labels": [ "O","O","O" ]
+    },
+    {
+        "time_start": 380.0,
+        "time_end": 384.0,
+        "text": "qui a inventé pas la roue alors",
+        "words": [ "qui","a","inventé","pas","la","roue","alors" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 384.0,
+        "time_end": 388.0,
+        "text": "est morte les librairies qui existent c'est bien mais attention",
+        "words": [ "est","morte","les","librairies","qui","existent","c","'","est","bien","mais","attention" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 388.0,
+        "time_end": 392.0,
+        "text": "pas y aller à toutes les sauces typiquement dans votre Dom c'est juste",
+        "words": [ "pas","y","aller","à","toutes","les","sauces","typiquement","dans","votre","Dom","c","'","est","juste" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 392.0,
+        "time_end": 396.0,
+        "text": "sélectionner trois éléments embarquez pas tout jQuery ou je ne sais quelle",
+        "words": [ "sélectionner","trois","éléments","embarquez","pas","tout","jQuery","ou","je","ne","sais","quelle" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 396.0,
+        "time_end": 400.0,
+        "text": "mets juste pour ça ça sert à rien",
+        "words": [ "mets","juste","pour","ça","ça","sert","à","rien" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 400.0,
+        "time_end": 404.0,
+        "text": "pour pouvoir prendre du recul là-dessus typiquement là il",
+        "words": [ "pour","pouvoir","prendre","du","recul","là","-","dessus","typiquement","là","il" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 404.0,
+        "time_end": 408.0,
+        "text": "longtemps j'ai implémenté ma propre librairie",
+        "words": [ "longtemps","j","'","ai","implémenté","ma","propre","librairie" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 408.0,
+        "time_end": 412.0,
+        "text": "pourtant il en existe des dizaines qui répondaient à mon besoin",
+        "words": [ "pourtant","il","en","existe","des","dizaines","qui","répondaient","à","mon","besoin" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 412.0,
+        "time_end": 416.0,
+        "text": "j'ai tout tester j'ai lu toutes les docks c'était sympa",
+        "words": [ "j","'","ai","tout","tester","j","'","ai","lu","toutes","les","docks","c","'","était","sympa" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 416.0,
+        "time_end": 420.0,
+        "text": "pour autant j'en ai retenu aucune j'en ai retenu aucune parce",
+        "words": [ "pour","autant","j","'","en","ai","retenu","aucune","j","'","en","ai","retenu","aucune","parce" ],
+        "labels": [ "B-FIL","I-FIL","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 420.0,
+        "time_end": 424.0,
+        "text": "elle répond à 99",
+        "words": [ "elle","répond","à","99" ],
+        "labels": [ "O","O","O","O" ]
+    },
+    {
+        "time_start": 424.0,
+        "time_end": 428.0,
+        "text": "tas de choses que j'ai pas besoin",
+        "words": [ "tas","de","choses","que","j","'","ai","pas","besoin" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 428.0,
+        "time_end": 432.0,
+        "text": "je me suis inspiré de tout ce que j'ai vu j'ai fait ma propre lib",
+        "words": [ "je","me","suis","inspiré","de","tout","ce","que","j","'","ai","vu","j","'","ai","fait","ma","propre","lib" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 432.0,
+        "time_end": 436.0,
+        "text": "tu répondais cette fois 100 % de mon besoin ni plus ni moins",
+        "words": [ "tu","répondais","cette","fois","100","%","de","mon","besoin","ni","plus","ni","moins" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 436.0,
+        "time_end": 440.0,
+        "text": "ce qui m'amène à ce point Yann",
+        "words": [ "ce","qui","m","'","amène","à","ce","point","Yann" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 440.0,
+        "time_end": 444.0,
+        "text": "viens en français vous n'en n'aurez pas besoin inutile d'implémenter des choses",
+        "words": [ "viens","en","français","vous","n","'","en","n","'","aurez","pas","besoin","inutile","d","'","implémenter","des","choses" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 444.0,
+        "time_end": 448.0,
+        "text": "pour plus tard c'est de la dette et pour ça il est",
+        "words": [ "pour","plus","tard","c","'","est","de","la","dette","et","pour","ça","il","est" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 448.0,
+        "time_end": 452.0,
+        "text": "c'est importante Marseille comprenez respecter votre Scop",
+        "words": [ "c","'","est","importante","Marseille","comprenez","respecter","votre","Scop" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 452.0,
+        "time_end": 456.0,
+        "text": "ok on a vu différents langages",
+        "words": [ "ok","on","a","vu","différents","langages" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 456.0,
+        "time_end": 460.0,
+        "text": "différents outils les framework mais pas trop",
+        "words": [ "différents","outils","les","framework","mais","pas","trop" ],
+        "labels": [ "O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 460.0,
+        "time_end": 464.0,
+        "text": "ah non on va pouvoir rentrer dans cette phase qu'on va appeler le flow",
+        "words": [ "ah","non","on","va","pouvoir","rentrer","dans","cette","phase","qu","'","on","va","appeler","le","flow" ],
+        "labels": [ "B-INT","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 464.0,
+        "time_end": 468.0,
+        "text": "le flow c'est cet état d'esprit quand",
+        "words": [ "le","flow","c","'","est","cet","état","d","'","esprit","quand" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 468.0,
+        "time_end": 472.0,
+        "text": "tout le monde autour disparaît fait plus qu'un avec votre écran",
+        "words": [ "tout","le","monde","autour","disparaît","fait","plus","qu","'","un","avec","votre","écran" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 472.0,
+        "time_end": 476.0,
+        "text": "et c'est parti mais",
+        "words": [ "et","c","'","est","parti","mais" ],
+        "labels": [ "O","O","O","O","O","O" ]
+    },
+    {
+        "time_start": 476.0,
+        "time_end": 480.0,
+        "text": "joue de cet état c'est génial mais faut s'en méfier",
+        "words": [ "joue","de","cet","état","c","'","est","génial","mais","faut","s","'","en","méfier" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ]
+    }
+]
