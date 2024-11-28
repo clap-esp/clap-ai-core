@@ -7,6 +7,8 @@ Bienvenue dans le projet `clap-ai-core` ! Ce dépôt contient le noyau d'intelli
 ```
 clap-ai-core/
 │
+├── API/
+│   └── ...  # Application + methods
 ├── data/
 │   └── ...  # Contient les datasets utilisés pour l'entraînement ou l'évaluation des modèles
 ├── models/
@@ -35,12 +37,16 @@ pip install -r requirements.txt
 # deactivate env
 deactivate
 
-# start API 🚧 
+# start API
+cd API
 python app.py
+
+# test api for dev
+python test_app.py
 
 ```
 
-**Pour executer un fichier \*.ipynb**    
+**Pour executer un fichier \*.ipynb**  
 -> choisir le Kernel env(Python 3.11.x) -> env/Scripts/python.exe
 
 ### Contribuer
@@ -56,9 +62,9 @@ Ce fichier contient les secrets (ex clé d'API). Il ne doit jamais être push su
 
 🚧 en construction ...
 
-1. Module Speech to Text
-2. Module NLP (Natural Language Processing)
+1. Speech to Text
+2. NER
 
 ## Architerture
 
-🚧
+Le script app.py génère un fichier final_format.json disponible pour l'UI
