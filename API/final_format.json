@@ -330,7 +330,7 @@
     },
     {
         "start_time": 184.33,
-        "duration": 0.33,
+        "duration": 0.34,
         "words": [ "puis" ],
         "labels": [ "B-INT" ],
         "event": "INT"
@@ -569,7 +569,7 @@
     },
     {
         "start_time": 286.18,
-        "duration": 0.36,
+        "duration": 0.37,
         "words": [ "ne" ],
         "labels": [ "B-REP" ],
         "event": "REP"
@@ -711,8 +711,8 @@
     {
         "start_time": 348.0,
         "duration": 4.0,
-        "words": [ "application","O2","sert","à","rien","autant","faire","son","propre","système" ],
-        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "words": [ "application","hot","2","sert","à","rien","autant","faire","son","propre","système" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
         "event": "O"
     },
     {
