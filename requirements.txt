@@ -9,3 +9,5 @@ tf-keras
 transformers
 huggingface-hub
 ipykernel
+librosa==0.10.2.post1
+moviepy==1.0.3
