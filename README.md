@@ -60,11 +60,14 @@ Ce fichier contient les secrets (ex clé d'API). Il ne doit jamais être push su
 
 ## Fonctionnalités
 
-🚧 en construction ...
-
 1. Speech to Text
 2. NER
+🚧 en construction ...
 
 ## Architerture
 
 Le script app.py génère un fichier final_format.json disponible pour l'UI
+
+## Dataset
+
+-> Documentation about [datasets](./data/README.md)
