@@ -1,0 +1,957 @@
+[
+    {
+        "start_time": 0.0,
+        "duration": 4.0,
+        "words": [ "OK" ],
+        "labels": [ "O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 4.0,
+        "duration": 4.0,
+        "words": [ "bienvenue","tout","le","monde","dans","ce","talk","devenez","développeur","senior" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 8.0,
+        "duration": 4.0,
+        "words": [ "non","seulement","20","minutes","je","vais","me","présenter" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 12.0,
+        "duration": 4.0,
+        "words": [ "mets","-","moi","c","'","est","Claude","Saint","-","Georges","je","suis","passionné","du","code","depuis" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 16.0,
+        "duration": 4.0,
+        "words": [ "si","je","fais","du","Java","depuis","10","ans","d","'","entreprise" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 20.0,
+        "duration": 4.0,
+        "words": [ "depuis","6","ans","et","je","travaille","chez","quitté" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 24.0,
+        "duration": 4.0,
+        "words": [ "avant","de","commencer","je","vous","pose","une","question" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 28.0,
+        "duration": 4.0,
+        "words": [ "combien","de","temps","faut","-","il","pour","devenir","développeur","senior" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 32.0,
+        "duration": 4.0,
+        "words": [ "qui","dirait","20","minutes","du","coup" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 36.0,
+        "duration": 4.0,
+        "words": [ "qui","dirait","5","ans","plus","ou","moins" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 40.0,
+        "duration": 4.0,
+        "words": [ "qui","dirait","bien","plus","OK" ],
+        "labels": [ "O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 44.0,
+        "duration": 4.0,
+        "words": [ "effectivement" ],
+        "labels": [ "O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 48.0,
+        "duration": 4.0,
+        "words": [ "peu","importe","la","pratique","on","dit","qu","'","il","faut","à","peu","près","10","ans" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 52.0,
+        "duration": 4.0,
+        "words": [ "pour","développer","une","séniorité","alors","je" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 56.0,
+        "duration": 4.0,
+        "words": [ "quelques","exemples","ont","dit","Mozart","par","exemple","c","'","était" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 60.0,
+        "duration": 4.0,
+        "words": [ "prodige","à","4","ans","c","'","est","peut","-","être","vrai" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 64.0,
+        "duration": 4.0,
+        "words": [ "attendant","pour","qui","développe","les","morceaux","qu","'","on","connaît","de","lui" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 68.0,
+        "duration": 4.0,
+        "words": [ "lui","il","aura","fallu","13","ans","de","plus","les","Beatles","pareil","on","dit","qu","'","ils","ont","eu","avec" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 72.0,
+        "duration": 4.0,
+        "words": [ "succès","instantané","c","'","est","faux","ils","ont","passé","10" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 76.0,
+        "duration": 4.0,
+        "words": [ "on","démarre","à","Londres","faire","les","tournées","avant","de","connaître","vraiment","le","succès" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 80.0,
+        "duration": 4.0,
+        "words": [ "bon","du","coup" ],
+        "labels": [ "O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 84.0,
+        "duration": 4.0,
+        "words": [ "j","'","ai","proposé","aux","organisateurs","de","faire","un","toc","de","10","ans","mais","bon","ils","m","'","ont","dit","non" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 88.0,
+        "duration": 4.0,
+        "words": [ "est","-","ce","que","je","viens","vous","apporter","du","coup" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 92.0,
+        "duration": 4.0,
+        "words": [ "aujourd","'","hui","c","'","est","plus","à","apprendre","à","devenir","développeur","senior" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 96.0,
+        "duration": 4.0,
+        "words": [ "et","vous","apporter","des","billes","qui","ont","qui","sont" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 100.0,
+        "duration": 4.0,
+        "words": [ "monte","dans","mon","parcours","et","qui","m","'","ont","accompagné","dans","l","'","app" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 104.0,
+        "duration": 4.0,
+        "words": [ "continue","à","m","'","accompagner","dans","l","'","apprentissage","à","maintenir","une" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 108.0,
+        "duration": 4.0,
+        "words": [ "mets","la","sécurité","et","qui","sont","articulés","autour","de","deux","axes" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 112.0,
+        "duration": 4.0,
+        "words": [ "la","passion","et","le","partage" ],
+        "labels": [ "O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 116.0,
+        "duration": 4.0,
+        "words": [ "encore","on","va","commencer","par","la","passion" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 120.0,
+        "duration": 4.0,
+        "words": [ "en","lui","disant","c","'","est","long","en","disant" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 124.0,
+        "duration": 4.0,
+        "words": [ "parcours","vaut","mieux","être","passionné","quand","même" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 128.0,
+        "duration": 4.0,
+        "words": [ "quand","on","est","passionné" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 132.0,
+        "duration": 4.0,
+        "words": [ "on","y","met","de","l","'","émotion" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 136.0,
+        "duration": 4.0,
+        "words": [ "investi","sa","personnalité" ],
+        "labels": [ "O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 140.0,
+        "duration": 4.0,
+        "words": [ "tout","ça","ça","mène","une","chose","quand","même","qui","est","mon","premier","point" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 144.0,
+        "duration": 4.0,
+        "words": [ "faut","trouver","ça","fun","c","'","est","important","de","trouver","sa","femme" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 148.0,
+        "duration": 4.0,
+        "words": [ "si","le","code","ça","vous","fait","pas","marrer","les","10","ans","ça","va","être" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 152.0,
+        "duration": 4.0,
+        "words": [ "et","un","autre","point","du","coup","également","au","travers","de","la","passion" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 156.0,
+        "duration": 4.0,
+        "words": [ "investir","son","temps" ],
+        "labels": [ "O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 160.0,
+        "duration": 4.0,
+        "words": [ "ok","on" ],
+        "labels": [ "O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 164.0,
+        "duration": 4.0,
+        "words": [ "mets","un","petit","peu","conne","s","'","il","existe","tout","un","tas","de","langage" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 168.0,
+        "duration": 4.0,
+        "words": [ "comme","je","vous","l","'","ai","dit","au","début" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 172.0,
+        "duration": 4.0,
+        "words": [ "j","'","ai","commencé","je","me","suis","passionné","pour","le","lève","j","'","étais" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 176.0,
+        "duration": 4.0,
+        "words": [ "je","te","soudeuse","à","l","'","époque" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 180.0,
+        "duration": 4.0,
+        "words": [ "tomber","sur","un","bouquin","un","bouquin","de","Pascal","en","fait","j","'","ai","appris","le","pas" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","I-FIL","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 184.0,
+        "duration": 0.33,
+        "words": [ "et" ],
+        "labels": [ "B-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 184.33,
+        "duration": 0.33,
+        "words": [ "puis" ],
+        "labels": [ "B-INT" ],
+        "event": "INT"
+    },
+    {
+        "start_time": 184.67,
+        "duration": 3.33,
+        "words": [ "j","'","ai","appris","que","en","fait","faire","du","C" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 188.0,
+        "duration": 0.15,
+        "words": [ "bah" ],
+        "labels": [ "B-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 188.15,
+        "duration": 3.85,
+        "words": [ "c","'","est","bien","de","faire","du","c","'","est","donc","moi","je","me","suis","mis","aussi","et","puis","je","me","suis","éparpillé","comme","ça" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 192.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 196.0,
+        "duration": 0.62,
+        "words": [ "pour","autant" ],
+        "labels": [ "B-FIL","I-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 196.62,
+        "duration": 3.38,
+        "words": [ "j","'","ai","arrêté","en","fait","dans","mes","études","du","coup" ],
+        "labels": [ "O","O","O","O","O","I-FIL","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 200.0,
+        "duration": 4.0,
+        "words": [ "je","peux","voir","des","tas","d","'","autres","choses","je","me","suis","mis","au","final","à","la" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 204.0,
+        "duration": 4.0,
+        "words": [ "mets","Oscar","au","PHP","au","piton" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 208.0,
+        "duration": 4.0,
+        "words": [ "j","'","ai","appris","des","tas","de","langage","qu","'","est","-","ce","que" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 212.0,
+        "duration": 4.0,
+        "words": [ "m","'","a","apporté","ça","m","'","a","apporté","la","diversité" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 216.0,
+        "duration": 4.0,
+        "words": [ "la","diversité","dans","la","syntaxe" ],
+        "labels": [ "O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 220.0,
+        "duration": 4.0,
+        "words": [ "c","'","était","dans","les","paradigmes","apprendre","à","savoir","sur","un" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 224.0,
+        "duration": 4.0,
+        "words": [ "l","'","application","un","autre","prendre","du","recul","aussi" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 228.0,
+        "duration": 4.0,
+        "words": [ "détacher","un","peu","des","langages","découvrir","qu","'","il","y","a","des","schémas" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 232.0,
+        "duration": 4.0,
+        "words": [ "qui","qui","ressort","de","tout","ça","je","pense","au","design","pattern","par","exemple" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 236.0,
+        "duration": 1.6,
+        "words": [ "ça","va","beaucoup","enrichi" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 237.6,
+        "duration": 0.8,
+        "words": [ "en","fait" ],
+        "labels": [ "B-FIL","I-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 238.4,
+        "duration": 1.6,
+        "words": [ "donc","apprenez","différents","langages" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 240.0,
+        "duration": 4.0,
+        "words": [ "j","'","entends","dire" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 244.0,
+        "duration": 0.4,
+        "words": [ "oui" ],
+        "labels": [ "B-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 244.4,
+        "duration": 3.6,
+        "words": [ "au","début","tu","as","dit","ça","fait","10","ans" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 248.0,
+        "duration": 2.57,
+        "words": [ "tu","fais","du","Java","en","entreprise","en","fait","alors" ],
+        "labels": [ "O","O","O","O","O","O","O","I-FIL","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 250.57,
+        "duration": 0.29,
+        "words": [ "oui" ],
+        "labels": [ "B-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 250.86,
+        "duration": 1.14,
+        "words": [ "c","'","est","vrai" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 252.0,
+        "duration": 4.0,
+        "words": [ "au","boulot","à","95","%","du","temps","je","fais","du","Java" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 256.0,
+        "duration": 4.0,
+        "words": [ "mais","quand","je","fais","la","veille","à","côté","quand","chez","moi","pour","le","plaisir" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 260.0,
+        "duration": 4.0,
+        "words": [ "je","fais","autre","chose","que","du","Java","justement" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 264.0,
+        "duration": 4.0,
+        "words": [ "je","vais","chercher","autre","chose","un","autre","cadre","une","autre","stack" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 268.0,
+        "duration": 4.0,
+        "words": [ "choses","importantes","sortez","du","cadre","professionnel" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 272.0,
+        "duration": 4.0,
+        "words": [ "découvrir","d","'","autres","outils" ],
+        "labels": [ "O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 276.0,
+        "duration": 4.0,
+        "words": [ "les","outils","on","va","en","parler" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 280.0,
+        "duration": 4.0,
+        "words": [ "au","début","moi","je","voulais","être","un","puriste" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 284.0,
+        "duration": 2.18,
+        "words": [ "il","y","a","des","gens","qui" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 286.18,
+        "duration": 0.36,
+        "words": [ "ne" ],
+        "labels": [ "B-REP" ],
+        "event": "REP"
+    },
+    {
+        "start_time": 286.55,
+        "duration": 1.45,
+        "words": [ "jurent","que","par","VIP" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 288.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 292.0,
+        "duration": 4.0,
+        "words": [ "je","vais","être","un","puriste","j","'","ai","pas","utilisé","tous","les","outils","que","j","'","ai","autour","de","moi" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 296.0,
+        "duration": 4.0,
+        "words": [ "je","me","suis","même","dit","je","vais","faire","mon","propre","éditeur","faire","comme","les","grands" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 300.0,
+        "duration": 4.0,
+        "words": [ "lance","la","Richard","Stallman","can","top","song","pour" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 304.0,
+        "duration": 4.0,
+        "words": [ "minuteur","c","'","était","pire","que","bloc","-","notes" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 308.0,
+        "duration": 4.0,
+        "words": [ "je","me","suis","dit","du","coup","je","vais","peut","-","être","utiliser" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 312.0,
+        "duration": 4.0,
+        "words": [ "des","idées","sont","pas","que","des","usines","à","gaz" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 316.0,
+        "duration": 4.0,
+        "words": [ "peux","-","tu","me","tourner","vers","d","'","autres","plugin","je","pense","au","Linder" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 320.0,
+        "duration": 1.6,
+        "words": [ "je","pense","à","sonar" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 321.6,
+        "duration": 0.8,
+        "words": [ "en","fait" ],
+        "labels": [ "B-FIL","I-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 322.4,
+        "duration": 1.6,
+        "words": [ "c","'","est","tout" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 324.0,
+        "duration": 4.0,
+        "words": [ "allume","le","boutique","sont","là","et","qui","m","'","accompagne","dans","ma","montée" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 328.0,
+        "duration": 4.0,
+        "words": [ "mets","danse","sur","le","code","appuyez","-","vous","sur","les","outils","ex" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 332.0,
+        "duration": 1.0,
+        "words": [ "donc","ok" ],
+        "labels": [ "B-FIL","I-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 333.0,
+        "duration": 3.0,
+        "words": [ "on","a","vu","différents","langages","différents" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 336.0,
+        "duration": 4.0,
+        "words": [ "les","framework","on","va","parler","un","peu","des","framework" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 340.0,
+        "duration": 4.0,
+        "words": [ "au","début","je","me","disais","les","frameworks","pour","les","flemmards","c","'","est","pour" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 344.0,
+        "duration": 4.0,
+        "words": [ "le","système" ],
+        "labels": [ "O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 348.0,
+        "duration": 4.0,
+        "words": [ "application","O2","sert","à","rien","autant","faire","son","propre","système" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 352.0,
+        "duration": 4.0,
+        "words": [ "application","je","l","'","ai","fait","puis","au","boulot","j","'","ai","filé","au" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 356.0,
+        "duration": 4.0,
+        "words": [ "pour","tester","bon","5","minutes","il","m","'","a","planté","le","truc","il","m","'","a","envoyé","mon" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 360.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 364.0,
+        "duration": 4.0,
+        "words": [ "je","me","suis","remis","en","question","là","-","dessus","je","me","suis","dit","bon","j","'","ai","peut","-","être","l","'","IMP" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 368.0,
+        "duration": 4.0,
+        "words": [ "bo2","au","final","ben","j","'","ai","j","'","ai","appris","ce","que" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 372.0,
+        "duration": 4.0,
+        "words": [ "mets","système","authentification","à","travers","de","ce","framework","sens" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 376.0,
+        "duration": 4.0,
+        "words": [ "quand","le","réinventer" ],
+        "labels": [ "O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 380.0,
+        "duration": 4.0,
+        "words": [ "qui","a","inventé","pas","la","roue","alors" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 384.0,
+        "duration": 4.0,
+        "words": [ "est","morte","les","librairies","qui","existent","c","'","est","bien","mais","attention" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 388.0,
+        "duration": 4.0,
+        "words": [ "pas","y","aller","à","toutes","les","sauces","typiquement","dans","votre","Dom","c","'","est","juste" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 392.0,
+        "duration": 4.0,
+        "words": [ "sélectionner","trois","éléments","embarquez","pas","tout","jQuery","ou","je","ne","sais","quelle" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 396.0,
+        "duration": 4.0,
+        "words": [ "mets","juste","pour","ça","ça","sert","à","rien" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 400.0,
+        "duration": 4.0,
+        "words": [ "pour","pouvoir","prendre","du","recul","là","-","dessus","typiquement","là","il" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 404.0,
+        "duration": 4.0,
+        "words": [ "longtemps","j","'","ai","implémenté","ma","propre","librairie" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 408.0,
+        "duration": 4.0,
+        "words": [ "pourtant","il","en","existe","des","dizaines","qui","répondaient","à","mon","besoin" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 412.0,
+        "duration": 4.0,
+        "words": [ "j","'","ai","tout","tester","j","'","ai","lu","toutes","les","docks","c","'","était","sympa" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 416.0,
+        "duration": 0.53,
+        "words": [ "pour","autant" ],
+        "labels": [ "B-FIL","I-FIL" ],
+        "event": "FIL"
+    },
+    {
+        "start_time": 416.53,
+        "duration": 3.47,
+        "words": [ "j","'","en","ai","retenu","aucune","j","'","en","ai","retenu","aucune","parce" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 420.0,
+        "duration": 4.0,
+        "words": [ "elle","répond","à","99" ],
+        "labels": [ "O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 424.0,
+        "duration": 4.0,
+        "words": [ "tas","de","choses","que","j","'","ai","pas","besoin" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 428.0,
+        "duration": 4.0,
+        "words": [ "je","me","suis","inspiré","de","tout","ce","que","j","'","ai","vu","j","'","ai","fait","ma","propre","lib" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 432.0,
+        "duration": 4.0,
+        "words": [ "tu","répondais","cette","fois","100","%","de","mon","besoin","ni","plus","ni","moins" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 436.0,
+        "duration": 4.0,
+        "words": [ "ce","qui","m","'","amène","à","ce","point","Yann" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 440.0,
+        "duration": 4.0,
+        "words": [ "viens","en","français","vous","n","'","en","n","'","aurez","pas","besoin","inutile","d","'","implémenter","des","choses" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 444.0,
+        "duration": 4.0,
+        "words": [ "pour","plus","tard","c","'","est","de","la","dette","et","pour","ça","il","est" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 448.0,
+        "duration": 4.0,
+        "words": [ "c","'","est","importante","Marseille","comprenez","respecter","votre","Scop" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 452.0,
+        "duration": 4.0,
+        "words": [ "ok","on","a","vu","différents","langages" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 456.0,
+        "duration": 4.0,
+        "words": [ "différents","outils","les","framework","mais","pas","trop" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 460.0,
+        "duration": 0.25,
+        "words": [ "ah" ],
+        "labels": [ "B-INT" ],
+        "event": "INT"
+    },
+    {
+        "start_time": 460.25,
+        "duration": 3.75,
+        "words": [ "non","on","va","pouvoir","rentrer","dans","cette","phase","qu","'","on","va","appeler","le","flow" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 464.0,
+        "duration": 4.0,
+        "words": [ "le","flow","c","'","est","cet","état","d","'","esprit","quand" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 468.0,
+        "duration": 4.0,
+        "words": [ "tout","le","monde","autour","disparaît","fait","plus","qu","'","un","avec","votre","écran" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 472.0,
+        "duration": 4.0,
+        "words": [ "et","c","'","est","parti","mais" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 476.0,
+        "duration": 4.0,
+        "words": [ "joue","de","cet","état","c","'","est","génial","mais","faut","s","'","en","méfier" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    }
+]
