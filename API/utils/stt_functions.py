@@ -8,7 +8,11 @@ def log(message):
     if debug_mode:
         print(message)
 
-def process_stt(audio_file_path, chunk_length_ms=4000):
+
+def process_stt():
+    pass
+
+def process_stt_deprecated(audio_file_path, chunk_length_ms=4000):
     """Process the audio file and return a list of transcribed sentences with timestamps"""
     print(f"Processing audio file: {audio_file_path}")
 

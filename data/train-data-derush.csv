@@ -1,6 +1,7 @@
 phrase,items,labels
 "Bienvenue sur notre podcast, euh, où nous v- v- vous parlons de voyages","['Bienvenue', 'sur', 'notre', 'podcast', ',', 'euh', ',', 'où', 'nous', 'v-', 'v-', 'vous', 'parlons', 'de', 'voyages']","['O', 'O', 'O', 'O', 'O', 'B-FIL', 'O', 'O', 'O', 'B-STU', 'I-STU', 'O', 'O', 'O', 'O']"
 "[Respiration] Pour ainsi dire, nous, nous allons commencer","['[Respiration]', 'Pour', 'ainsi', 'dire', ',', 'nous', ',', 'nous', 'allons', 'commencer']","['B-NOI', 'B-FIL', 'I-FIL', 'I-FIL', 'O', 'O', 'O', 'B-REP', 'O', 'O']"
+"tomber sur un bouquin un bouquin de Pascal en fait j'ai appris le pas","['tomber', 'sur', 'un', 'bouquin', 'un', 'bouquin', 'de', 'Pascal', 'en', 'fait', 'j\'ai', 'appris', 'le', 'pas']","['O', 'O', 'O', 'O', 'B-REP', 'I-REP', 'O', 'O', 'B-FIL', 'I-FIL', 'O', 'O', 'O', 'O']"
 "[Clic] Euh, à à à vrai dire, je suis perplexe.","['[Clic]', 'Euh', ',', 'à', 'à', 'à', 'vrai', 'dire', ',', 'je', 'suis', 'perplexe', '.']","['B-NOI', 'B-FIL', 'O', 'B-REP', 'I-REP', 'I-REP', 'O', 'O', 'O', 'O', 'O', 'O', 'O']"
 "Quoi ? Tu as t- t- toujours su cela ?","['Quoi', '?', 'Tu', 'as', 't-', 't-', 'toujours', 'su', 'cela', '?']","['B-INT', 'O', 'O', 'O', 'B-STU', 'I-STU', 'O', 'O', 'O', 'O']"
 "Euh, je v- v- pense que, en fait, c'est une bonne idée.","['Euh',',','je','v-','v-','pense','que',',','en','fait',',','c\'est','une','bonne','idée','.']","['B-FIL','O','O','B-STU','I-STU','O','O','O','B-FIL','I-FIL','O','O','O','O','O','O']"
@@ -168,3 +169,6 @@ phrase,items,labels
 "Euh, et donc, tu v- voulais me dire quelque chose ?","['Euh', ',', 'et', 'donc', ',', 'tu', 'v-', 'voulais', 'me', 'dire', 'quelque', 'chose', '?']","['B-FIL', 'O', 'B-FIL', 'I-FIL', 'O', 'O', 'B-STU', 'O', 'O', 'O', 'O', 'O', 'O']"
 "Euh, mais en fait, je ne ne peux pas venir ce soir","['Euh', ',', 'mais', 'en', 'fait', ',', 'je', 'ne', 'ne', 'peux', 'pas', 'venir', 'ce', 'soir']","['B-FIL', 'O', 'B-FIL', 'I-FIL', 'I-FIL', 'O', 'O', 'O', 'B-REP', 'O', 'O', 'O', 'O', 'O']"
 "Ah, aujourd'hui, nous avons un invité spécial","['Ah', ',', 'aujourd\'hui', ',', 'nous', 'avons', 'un', 'invité', 'spécial']","['B-INT', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']"
+"je me suis dit du coup je vais peut-être utiliser","['je', 'me', 'suis', 'dit', 'du', 'coup', 'je', 'vais', 'peut', '-', 'être', 'utiliser']","['O', 'O', 'O', 'O', 'B-FIL', 'I-FIL', 'O', 'O', 'O', 'O', 'O', 'O']"
+"bon au final ben j'ai j'ai appris ce que","['bo2', 'au', 'final', 'ben', 'j\'ai', 'j\'ai', 'appris', 'ce', 'que']","['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']"
+"pour autant j'en ai retenu aucune j'en ai retenu aucune parce","['pour', 'autant', 'j\'en', 'ai', 'retenu', 'aucune', 'j\'en', 'ai', 'retenu', 'aucune', 'parce']","['B-FIL', 'I-FIL', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']"
