@@ -1,6 +1,6 @@
 import os
 import json
-from utils.stt_functions import process_stt
+from utils.stt_functions import process_stt_deprecated # replace with process_stt
 from utils.ner_functions import process_ner
 from utils.common_functions import beautify_json
 from utils.final_format import compute_and_segment
@@ -17,7 +17,7 @@ OUTPUT_FORMAT_PATH = os.path.join(os.path.dirname(__file__), 'test_output_format
 
 
 # STT
-stt_result = process_stt(audio_path_wav)
+stt_result = process_stt_deprecated(audio_path_wav) # replace with process_stt
 
 with open(OUTPUT_STT_PATH, 'w', encoding='utf-8') as json_file:
     json.dump(stt_result, json_file, ensure_ascii=False, indent=4)

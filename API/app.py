@@ -2,7 +2,7 @@ import os
 import json
 # from fastapi import FastAPI, UploadFile, File, HTTPException
 # import uvicorn
-from utils.stt_functions import process_stt
+from utils.stt_functions import process_stt_deprecated # replace with process_stt
 from utils.ner_functions import process_ner
 from utils.common_functions import beautify_json
 from utils.final_format import compute_and_segment
@@ -17,7 +17,7 @@ FORMAT_PATH = os.path.join(os.path.dirname(__file__), 'final_format.json')
 
 
 # STT
-stt_results = process_stt(audio_path_wav)
+stt_results = process_stt_deprecated(audio_path_wav) # replace with process_stt
 
 # NER
 ner_results = process_ner(stt_results)

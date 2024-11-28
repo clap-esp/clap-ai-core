@@ -15,7 +15,7 @@ MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', '..', 'models', 'bert
 MODEL_ABSPATH = os.path.abspath(MODEL_PATH)
 
 tokenizer = BertTokenizerFast.from_pretrained(MODEL_ABSPATH)
-special_tokens_dict = {'additional_special_tokens': ['[bruit]', '[SIL]']} # the model can receive chosen tokens
+special_tokens_dict = {'additional_special_tokens': ['[bruit]', '<Silence>']} # the model can receive chosen tokens
 num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
 
 model = TFBertForTokenClassification.from_pretrained(MODEL_ABSPATH)
