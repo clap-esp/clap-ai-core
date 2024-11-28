@@ -1,15 +1,32 @@
+# data Manipulation
 pandas
 numpy
+
+# visualization
 matplotlib
 seaborn
+
+# env
 python-dotenv
+
+# ML
 scikit-learn
-tensorflow
-tf-keras
-transformers
+
+# deep learning
+tensorflow  # includes tf-keras
 huggingface-hub
-ipykernel
-torch==2.5.1
-torchaudio==2.5.1
-librosa==0.10.2.post1
-moviepy==1.0.3
+transformers
+
+# dev tools
+ipykernel  # provides the kernel
+
+# FastAPI dev
+fastapi
+uvicorn  # ASGI server
+pydantic  # Data validation using Python type hints
+
+# audio manipulation
+pydub  
+
+# A decomissionner prochainement
+speechrecognition
