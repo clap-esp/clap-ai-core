@@ -1,32 +1,33 @@
 # data Manipulation
-pandas
-numpy
+pandas==2.2.3
 
 # visualization
-matplotlib
-seaborn
+matplotlib==3.9.4
+seaborn==0.13.2
 
 # env
-python-dotenv
+python-dotenv==1.0.1
 
 # ML
-scikit-learn
+scikit-learn==1.6.0
 
 # deep learning
-tensorflow  # includes tf-keras
-huggingface-hub
-transformers
+tensorflow==2.15.0  # includes tf-keras
+huggingface-hub==0.26.5
+transformers==4.47.0
+
+# translate
+deep-translator==1.11.4
+
+# audio / video manipulation
+pydub==0.25.1 
+librosa==0.10.2.post1
+moviepy==1.0.3
 
 # dev tools
-ipykernel  # provides the kernel
+# ipykernel  # provides the kernel
 
-# FastAPI dev
-fastapi
-uvicorn  # ASGI server
-pydantic  # Data validation using Python type hints
 
-# audio manipulation
-pydub  
 
-# A decomissionner prochainement
-speechrecognition
+# -> replace soon by whisper dependencies
+speechrecognition==3.12.0
