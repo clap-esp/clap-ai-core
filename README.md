@@ -37,12 +37,19 @@ pip install -r requirements.txt
 # deactivate env
 deactivate
 
-# start API
+# API scripts
 cd API
-python app.py
+# first, launch the transcription
+python app_transcription.py
+# launch the derush process
+python app_derush.py
+# launch the traduction
+python app_translate.py
 
-# test api for dev
-python test_app.py
+# for dev, use test_dev_<scripts>
+# for test the functions one by one and debug log
+python test_dev_transcription.py
+python test_dev_derush.py
 
 ```
 
