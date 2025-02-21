@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/clap-esp/clap-ai-core/compare/v1.1.0...v1.2.0) (2024-12-19)
+
+
+### Features
+
+* **api:** add translation script and reorgenise all process in 3 differents scripts + add folder to feed the front with .srt and .json exports ([c31b287](https://github.com/clap-esp/clap-ai-core/commit/c31b28795cd01f5de74a6f25a39529380ff60b33))
+
+## [1.1.0](https://github.com/clap-esp/clap-ai-core/compare/v1.0.0...v1.1.0) (2024-11-28)
+
+
+### Features
+
+* **API:** add 8minutes audio file and JSON outputs for api and api dev ([7db7d7c](https://github.com/clap-esp/clap-ai-core/commit/7db7d7c6d5af5f8ad5c1f2b0c37223a382bc526c))
+* **api:** add api and api version for dev + utils function ([afbec12](https://github.com/clap-esp/clap-ai-core/commit/afbec12d1ff46506ff4cdb5f8ebdccb8c3e4145e))
+
 ## 1.0.0 (2024-11-14)
 
 
