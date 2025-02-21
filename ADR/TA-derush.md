@@ -11,6 +11,6 @@ FIL (Filler Words) : « Euh », « en fait »
 REP (Repetitions) : je ne «  ne »  
 INT (Interjections) : « Ah »  
 NOI (Filler Noises) : « [bruit_de_porte] », « [Clic] »  
-SIL (Long Silences) : « [Silence] »
+SIL (Long Silences) : « \<Silence> »
 
--> la classe silence sera calculé dans le srt à la sortie de la transcription
+-> la classe silence sera calculé dans la process_stt()

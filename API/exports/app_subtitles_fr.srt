@@ -1,0 +1,659 @@
+1
+00:00:00,000 --> 00:00:04,000
+[Bruit]
+
+2
+00:00:04,000 --> 00:00:08,000
+[Bruit]
+
+3
+00:00:08,000 --> 00:00:12,000
+bonjour à tous bah moi je suis dans le
+
+4
+00:00:12,000 --> 00:00:16,000
+la queue ça veut dire que je n'ai jamais codé une ligne
+
+5
+00:00:16,000 --> 00:00:20,000
+le code depuis que de ma
+
+6
+00:00:20,000 --> 00:00:24,000
+tu m'aimes donc moi je suis plutôt que des produits donc
+
+7
+00:00:24,000 --> 00:00:28,000
+je suis consultant produits chez Zenika et
+
+8
+00:00:28,000 --> 00:00:32,000
+bah après maintes et maintes relances de Jul me voici ici
+
+9
+00:00:32,000 --> 00:00:36,000
+[Bruit]
+
+10
+00:00:36,000 --> 00:00:40,000
+non et donc je vais vous parler de produit management à qui ça parle le produit
+
+11
+00:00:40,000 --> 00:00:44,000
+bah j'ai bien fait de
+
+12
+00:00:44,000 --> 00:00:48,000
+[Bruit]
+
+13
+00:00:48,000 --> 00:00:52,000
+vraiment l'objectif de vous faire vraiment une présentation
+
+14
+00:00:52,000 --> 00:00:56,000
+[Bruit]
+
+15
+00:00:56,000 --> 00:01:00,000
+je vais bien sûr tout vous apprendre et
+
+16
+00:01:00,000 --> 00:01:04,000
+dis montrer que bah les développeurs ils ont aussi un recréer
+
+17
+00:01:04,000 --> 00:01:08,000
+dans cette approche de product management
+
+18
+00:01:08,000 --> 00:01:12,000
+qu'est-ce que c'est le produit management le produit management c'est une approche de création et d'innovation
+
+19
+00:01:12,000 --> 00:01:16,000
+mets-moi centré est dirigé sur le produit là vous allez me dire
+
+20
+00:01:16,000 --> 00:01:20,000
+qu'est-ce que c'est le produit Eva le produit
+
+21
+00:01:20,000 --> 00:01:24,000
+pétasse ça peut être un service ou un bien qui répond à un besoin
+
+22
+00:01:24,000 --> 00:01:28,000
+spécifique d'un ou plusieurs utilisateurs
+
+23
+00:01:28,000 --> 00:01:32,000
+donc en fait tout ce que vous développez en soi c'est des produits
+
+24
+00:01:32,000 --> 00:01:36,000
+donc en quoi vraiment consiste
+
+25
+00:01:36,000 --> 00:01:40,000
+bah c'est ça se retrouve en fait
+
+26
+00:01:40,000 --> 00:01:44,000
+mets au centre vraiment de 3
+
+27
+00:01:44,000 --> 00:01:48,000
+tu m'aimes que sont le business le marketing savoir en fait bah
+
+28
+00:01:48,000 --> 00:01:52,000
+on a un produit l'objectif c'est de vendre comment on va le vendre à qui on s'adresse
+
+29
+00:01:52,000 --> 00:01:56,000
+à quel marché
+
+30
+00:01:56,000 --> 00:02:00,000
+chiffre d'affaires on compte faire de quelle manière on va vendre le
+
+31
+00:02:00,000 --> 00:02:04,000
+pays avec quel pricing ou autres donc en fait il y a tout cette réflexion là
+
+32
+00:02:04,000 --> 00:02:08,000
+il y a la partie design comment on fait on va
+
+33
+00:02:08,000 --> 00:02:12,000
+poser une expérience aux utilisateurs pour que
+
+34
+00:02:12,000 --> 00:02:16,000
+comment il souhaite toujours l'utiliser revenir
+
+35
+00:02:16,000 --> 00:02:20,000
+ramener de la rétention auprès des utilisateurs
+
+36
+00:02:20,000 --> 00:02:24,000
+et à la partie Haïti bah c'est vraiment la réalisation
+
+37
+00:02:24,000 --> 00:02:28,000
+delivery comment on qu'est-ce qu'on va utiliser
+
+38
+00:02:28,000 --> 00:02:32,000
+pour pouvoir le mettre en place est à disposition
+
+39
+00:02:32,000 --> 00:02:36,000
+des de la cible client
+
+40
+00:02:36,000 --> 00:02:40,000
+vraiment c'est un peu l'ensemble
+
+41
+00:02:40,000 --> 00:02:44,000
+et donc en fait et l'ensemble bah ils sont
+
+42
+00:02:44,000 --> 00:02:48,000
+alors vous allez me dire que côté développeur c'est très
+
+43
+00:02:48,000 --> 00:02:52,000
+mais justement je pense que c'est il y a un intérêt que
+
+44
+00:02:52,000 --> 00:02:56,000
+personne qui travaille sur un produit comprenne au moins
+
+45
+00:02:56,000 --> 00:03:00,000
+le C3 grands domaines et il touche un peu
+
+46
+00:03:00,000 --> 00:03:04,000
+d'une certaine manière donc
+
+47
+00:03:04,000 --> 00:03:08,000
+le concept du produit management c'est une phrase
+
+48
+00:03:08,000 --> 00:03:12,000
+que j'utilise beaucoup et que je mets souvent je dis que c'est souvent la phrase la plus importante
+
+49
+00:03:12,000 --> 00:03:16,000
+venir quand je fais des formations pour du management c'est
+
+50
+00:03:16,000 --> 00:03:20,000
+le concept sera validé par la preuve le plus rapidement possible
+
+51
+00:03:20,000 --> 00:03:24,000
+ton travail sur le bon produit donc
+
+52
+00:03:24,000 --> 00:03:28,000
+qu'est-ce que ça veut dire validé par la preuve en fait c'est que on
+
+53
+00:03:28,000 --> 00:03:32,000
+bon eu des directeurs qui disent bah voilà on va faire telle fonctionnalité ça
+
+54
+00:03:32,000 --> 00:03:36,000
+ça va être génial en général c'est pas vraiment une preuve
+
+55
+00:03:36,000 --> 00:03:40,000
+donc c'est bien c'est plutôt une opinion et en fait il faut
+
+56
+00:03:40,000 --> 00:03:44,000
+valider cette opinion si vous devez
+
+57
+00:03:44,000 --> 00:03:48,000
+mets que il va y avoir vraiment de l'avoir de la valeur de l'impact pour les
+
+58
+00:03:48,000 --> 00:03:52,000
+radiateur en amont et en fait valider par la preuve ça peut être
+
+59
+00:03:52,000 --> 00:03:56,000
+avant développement mais aussi après développement
+
+60
+00:03:56,000 --> 00:04:00,000
+vous êtes génial vous avez développé qu'est-ce qui prouve qu'après cette fonctionnalité
+
+61
+00:04:00,000 --> 00:04:04,000
+je vais développer et vraiment génial vous vous basez sur quoi
+
+62
+00:04:04,000 --> 00:04:08,000
+le plus rapidement possible bah c'est tout simplement le fait
+
+63
+00:04:08,000 --> 00:04:12,000
+bah si on a des idées et que on souhaite pouvoir
+
+64
+00:04:12,000 --> 00:04:16,000
+à quelle heure le plus utilisateurs bah si on est les premiers
+
+65
+00:04:16,000 --> 00:04:20,000
+plus de chance de les acquérir et aussi bah que certains us
+
+66
+00:04:20,000 --> 00:04:24,000
+vite changer et aussi bah ça permet plus on fait rapidement plus on valide
+
+67
+00:04:24,000 --> 00:04:28,000
+rapidement l'épreuve et qu'on travaille sur le même produit et là vous allez
+
+68
+00:04:28,000 --> 00:04:32,000
+dire c'est quoi le bon produit et ben c'est un peu vraiment
+
+69
+00:04:32,000 --> 00:04:36,000
+tu sers un peu aux trois axes qu'on a vu précédemment
+
+70
+00:04:36,000 --> 00:04:40,000
+c'est vraiment s'assurer qu'on répond un peu le besoin un problème réel des
+
+71
+00:04:40,000 --> 00:04:44,000
+pourquoi c'est important parce qu'en fait si on résout
+
+72
+00:04:44,000 --> 00:04:48,000
+problème bah il y aura aucun facilement aucune utilisation
+
+73
+00:04:48,000 --> 00:04:52,000
+le fait que bah il y a la place sur le marché voilà
+
+74
+00:04:52,000 --> 00:04:56,000
+il y a peut-être de la concurrence la concurrence qui répond aussi déjà très bien
+
+75
+00:04:56,000 --> 00:05:00,000
+si on souhaite livrer un produit quasiment
+
+76
+00:05:00,000 --> 00:05:04,000
+polyvalent on essaie il y a peu de chances que ça réussisse le fait
+
+77
+00:05:04,000 --> 00:05:08,000
+pour l'entreprise l'objectif de l'entreprise c'est
+
+78
+00:05:08,000 --> 00:05:12,000
+c'est gagner de l'argent donc voilà que les investissements qui vont
+
+79
+00:05:12,000 --> 00:05:16,000
+et ben vous il va y avoir un retour sur investissement et aussi
+
+80
+00:05:16,000 --> 00:05:20,000
+le point super important que c'est faisable techniquement
+
+81
+00:05:20,000 --> 00:05:24,000
+donc là-dessus
+
+82
+00:05:24,000 --> 00:05:28,000
+quelle est l'approche un peu du
+
+83
+00:05:28,000 --> 00:05:32,000
+au global de management Séba pour
+
+84
+00:05:32,000 --> 00:05:36,000
+s'assurer de la phrase précédente
+
+85
+00:05:36,000 --> 00:05:40,000
+à chaque fois il vaut mieux commencer sur un produit d'avoir une vision
+
+86
+00:05:40,000 --> 00:05:44,000
+boire on veut aller d'accord en direction à Cap c'est en fait
+
+87
+00:05:44,000 --> 00:05:48,000
+d'embarquer les personnes qui travaillent sur le produit
+
+88
+00:05:48,000 --> 00:05:52,000
+donc télévision c'est pas spécialement
+
+89
+00:05:52,000 --> 00:05:56,000
+très très clair et c'est un peu le pourquoi de notre
+
+90
+00:05:56,000 --> 00:06:00,000
+mais après c'est comment on va atteindre cette vision
+
+91
+00:06:00,000 --> 00:06:04,000
+mettre la stratégie en fait là
+
+92
+00:06:04,000 --> 00:06:08,000
+10 c'est vraiment tout ce qu'on va mettre en place pour
+
+93
+00:06:08,000 --> 00:06:12,000
+éteins la vision donc comprendre le marché
+
+94
+00:06:12,000 --> 00:06:16,000
+comment maîtriser son son produit le fonctionnel est-ce que
+
+95
+00:06:16,000 --> 00:06:20,000
+mets bien en connaissance de cause l'ex
+
+96
+00:06:20,000 --> 00:06:24,000
+qu'est-ce qu'on offre et aussi récupérer les différents feedback et tout pour
+
+97
+00:06:24,000 --> 00:06:28,000
+écouter pivoter si c'est nécessaire par rapport aux différentes fonctionnalités
+
+98
+00:06:28,000 --> 00:06:32,000
+qui en découle
+
+99
+00:06:32,000 --> 00:06:36,000
+en fait c'est la remarque le quoi est aussi bah le camp va le livrer
+
+100
+00:06:36,000 --> 00:06:40,000
+et aussi un aspect gouvernance mais voilà
+
+101
+00:06:40,000 --> 00:06:44,000
+c'est tous les parties prenantes qui vont pouvoir interagir pour faire
+
+102
+00:06:44,000 --> 00:06:48,000
+avancer le produit je vais aller maintenant
+
+103
+00:06:48,000 --> 00:06:52,000
+un petit peu plus en détail par exemple sur la sur la vision
+
+104
+00:06:52,000 --> 00:06:56,000
+souvent quelque chose qu'on qui peut toucher
+
+105
+00:06:56,000 --> 00:07:00,000
+métier souvent qui fait souvent la différence
+
+106
+00:07:00,000 --> 00:07:04,000
+c'est que en ayant une vision et pas un plan
+
+107
+00:07:04,000 --> 00:07:08,000
+là il y a cet exemple de Martin Luther King pour les droits civiques
+
+108
+00:07:08,000 --> 00:07:12,000
+peignoir aux États-Unis il a pas dit on va bientôt
+
+109
+00:07:12,000 --> 00:07:16,000
+non en fait il a vraiment
+
+110
+00:07:16,000 --> 00:07:20,000
+tu as raison pour que toutes ces personnes puissent manifester
+
+111
+00:07:20,000 --> 00:07:24,000
+et avoir un vrai poids qui a permis justement qu'ils accèdent à l'ordre
+
+112
+00:07:24,000 --> 00:07:28,000
+ce fameux discours de i have a dream qui a permis vraiment de
+
+113
+00:07:28,000 --> 00:07:32,000
+d'embarquer un grand nombre de personnes
+
+114
+00:07:32,000 --> 00:07:36,000
+soit noir soi-même noir et qui souhaitait
+
+115
+00:07:36,000 --> 00:07:40,000
+fais-moi une égalité des personnes donc vraiment ça va être le pourquoi
+
+116
+00:07:40,000 --> 00:07:44,000
+la raison d'être un peu du produit ça peut être quelque chose
+
+117
+00:07:44,000 --> 00:07:48,000
+tu es très court mais vraiment spécifique et non transposable ça veut dire
+
+118
+00:07:48,000 --> 00:07:52,000
+avion elle n'appartient qu'à se produit elle peut pas utiliser pour un autre produit
+
+119
+00:07:52,000 --> 00:07:56,000
+et ça permet vraiment voilà d'expliquer le why
+
+120
+00:07:56,000 --> 00:08:00,000
+petit aparté je sais pas si vous connaissez cette tête
+
+121
+00:08:00,000 --> 00:08:04,000
+lance de Simone sinex sur
+
+122
+00:08:04,000 --> 00:08:08,000
+plaît pourquoi c'est important en fait d'amener du why pour
+
+123
+00:08:08,000 --> 00:08:12,000
+les personnes qui travaillent dans l'entreprise bah tout simplement
+
+124
+00:08:12,000 --> 00:08:16,000
+plus de facilité pour avancer avec eux
+
+125
+00:08:16,000 --> 00:08:20,000
+je vais avancer parce qu'il me reste que
+
+126
+00:08:20,000 --> 00:08:24,000
+10 minutes sur la vision
+
+127
+00:08:24,000 --> 00:08:28,000
+on a la vision et après bah ça va être
+
+128
+00:08:28,000 --> 00:08:32,000
+détruire c'est ce produit et ben on va passer par de grands
+
+129
+00:08:32,000 --> 00:08:36,000
+dont une que vous connaissez bien une peut-être un peu moins bien qui est le Discovery
+
+130
+00:08:36,000 --> 00:08:40,000
+comment qu'est-ce qu'on va qu'est-ce qu'on va faire
+
+131
+00:08:40,000 --> 00:08:44,000
+ce produit qu'est-ce qu'on va livrer et
+
+132
+00:08:44,000 --> 00:08:48,000
+comment on s'assure qu'on va pouvoir ça va
+
+133
+00:08:48,000 --> 00:08:52,000
+donner de l'impact et que le produit soit un produit
+
+134
+00:08:52,000 --> 00:08:56,000
+table du Discovery et on va définir
+
+135
+00:08:56,000 --> 00:09:00,000
+répondre à des problématiques d'utilisateur des solutions qui va
+
+136
+00:09:00,000 --> 00:09:04,000
+donc être le delivery ça va être comment on va livrer ses solutions
+
+137
+00:09:04,000 --> 00:09:08,000
+si les développeurs interviennent mais sur le Discovery les développeurs peuvent aussi
+
+138
+00:09:08,000 --> 00:09:12,000
+mieux comprendre les attentes aussi clients intervenir
+
+139
+00:09:12,000 --> 00:09:16,000
+quand même faire aussi des inter participer aux interviews utilisateurs pour voir
+
+140
+00:09:16,000 --> 00:09:20,000
+comment le produit est utilisé
+
+141
+00:09:20,000 --> 00:09:24,000
+ça m'emmerde maintenant
+
+142
+00:09:24,000 --> 00:09:28,000
+parenthèse donc en fait le produit que management c'est vraiment une approche holistique
+
+143
+00:09:28,000 --> 00:09:32,000
+avec différents aspects qui sont le business le design
+
+144
+00:09:32,000 --> 00:09:36,000
+steak pour moi je le définis plus c'est pas un cadre de travail
+
+145
+00:09:36,000 --> 00:09:40,000
+c'est plus un ensemble de pratiques qu'on peut utiliser pour
+
+146
+00:09:40,000 --> 00:09:44,000
+du succès de notre produit
+
+147
+00:09:44,000 --> 00:09:48,000
+vraiment cette approche elle permet de diriger tôt l'ensemble
+
+148
+00:09:48,000 --> 00:09:52,000
+investissement donc le fait de valider les hypothèses avant développement
+
+149
+00:09:52,000 --> 00:09:56,000
+donc ça c'est l'étape Discovery dont je viens de vous parler pour réduire justement
+
+150
+00:09:56,000 --> 00:10:00,000
+la vision qui permet de donner
+
+151
+00:10:00,000 --> 00:10:04,000
+direction et un sens aussi au produit et embarquer l'ensemble
+
+152
+00:10:04,000 --> 00:10:08,000
+et les personnes acteurs aussi du produit
+
+153
+00:10:08,000 --> 00:10:12,000
+c'est aussi important de se focaliser sur l'impact des fonctions
+
+154
+00:10:12,000 --> 00:10:16,000
+fonctionnalité livrée et pas seulement sur la fonctionnalité et
+
+155
+00:10:16,000 --> 00:10:20,000
+c'est très important valider l'impact
+
+156
+00:10:20,000 --> 00:10:24,000
+Valérie après qu'il soit livré et le dernier
+
+157
+00:10:24,000 --> 00:10:28,000
+non c'est que en fait les développeurs ont un rôle crucial
+
+158
+00:10:28,000 --> 00:10:32,000
+création de ce produit en fait en allant en fait toucher
+
+159
+00:10:32,000 --> 00:10:36,000
+par exemple en participant Discovery s'assurer de
+
+160
+00:10:36,000 --> 00:10:40,000
+prévision du produit est-ce qu'on est toujours en cohérence avec cette vision ou non
+
+161
+00:10:40,000 --> 00:10:44,000
+donc il y a énormément de choses qui peut être vue sur
+
+162
+00:10:44,000 --> 00:10:48,000
+produit management et je pense que les Dave ont aussi un rôle là
+
+163
+00:10:48,000 --> 00:10:52,000
+et ça sera tout c'est 10 minutes c'est très court
+
+164
+00:10:52,000 --> 00:10:56,000
+et voilà c'est une petite introduction mais avec plaisir pour en parler après
+
+165
+00:10:56,000 --> 00:10:57,059
+[Bruit]
