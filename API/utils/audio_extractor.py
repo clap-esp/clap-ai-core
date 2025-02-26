@@ -89,6 +89,7 @@ def split_audio_samples_with_effect_split(
         samples: np.ndarray,
         sample_rate: int,
         silence_threshold: int = 30,
+        # silence_threshold: int = 40,
         segment_duration_limit: int = 30,
 ) -> List[Tuple[float, np.ndarray]]:
     """
