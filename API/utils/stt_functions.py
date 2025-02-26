@@ -1,7 +1,12 @@
-import math
 import os
-from pydub import AudioSegment
+import math
 import speech_recognition as sr
+from pydub import AudioSegment
+
+from transformers import WhisperForConditionalGeneration, WhisperProcessor
+
+from ASR.speech_to_text import STTTranscriber
+from API.utils.audio_extractor import extract_audio_features
 
 debug_mode = None
 def log(message):
@@ -9,8 +14,13 @@ def log(message):
         print(message)
 
 
-def process_stt(): # for whisper
-    pass
+def process_stt(model: WhisperForConditionalGeneration, processor: WhisperProcessor, video_path: str, source_lang: str = "fr"): # for whisper
+    transcriber = STTTranscriber(model=model, processor=processor)
+
+    audio_segments = extract_audio_features(video_path, use_effect_split=True)
+    transcriber.process_audio(audio_segments)
+    return transcriber.transcribe(source_lang)
+
 
 def process_stt_deprecated(audio_file_path, chunk_length_ms=4000):
     """Process the audio file and return a list of transcribed sentences with timestamps"""

@@ -1,27 +1,28 @@
 import numpy as np
 
 from typing import Tuple, List, Dict
+from transformers import WhisperProcessor, WhisperForConditionalGeneration
+
 from API.utils.logger import build_logger
-from transformers import WhisperProcessor, TFWhisperForConditionalGeneration
 
 logger = build_logger("SpeechToText", level=20)
 
 
-def format_to_srt_time(seconds: float) -> str:
-    """
-    Formats time in seconds to SRT format HH:MM:SS,SSS.
-
-    Parameters:
-    - seconds: Time in seconds as a float.
-
-    Returns:
-    - str: Time formatted as HH:MM:SS,SSS.
-    """
-    hours = int(seconds // 3600)
-    minutes = int((seconds % 3600) // 60)
-    seconds = int(seconds % 60)
-    milliseconds = int((seconds - int(seconds)) * 1000)
-    return f"{hours:02}:{minutes:02}:{seconds:02},{milliseconds:03}"
+# def format_to_srt_time(seconds: float) -> str:
+#     """
+#     Formats time in seconds to SRT format HH:MM:SS,SSS.
+#
+#     Parameters:
+#     - seconds: Time in seconds as a float.
+#
+#     Returns:
+#     - str: Time formatted as HH:MM:SS,SSS.
+#     """
+#     hours = int(seconds // 3600)
+#     minutes = int((seconds % 3600) // 60)
+#     seconds = int(seconds % 60)
+#     milliseconds = int((seconds - int(seconds)) * 1000)
+#     return f"{hours:02}:{minutes:02}:{seconds:02},{milliseconds:03}"
 
 
 class STTTranscriber:
@@ -29,20 +30,20 @@ class STTTranscriber:
     A class to handle Speech-to-Text transcription using a pre-trained model.
 
     Attributes:
-    - model: The TFWhisperForConditionalGeneration model for transcription.
+    - model: The WhisperForConditionalGeneration model for transcription.
     - processor: The WhisperProcessor to preprocess inputs and decode outputs.
     - input_features: Cached input features from processed audio segments.
     """
 
-    def __init__(self, model: TFWhisperForConditionalGeneration, processor: WhisperProcessor):
+    def __init__(self, model: WhisperForConditionalGeneration, processor: WhisperProcessor):
         """
         Initializes the STTTranscriber with a model, processor, and segment duration.
 
         Parameters:
-        - model: A TFWhisperForConditionalGeneration model for transcription.
+        - model: A WhisperForConditionalGeneration model for transcription.
         - processor: WhisperProcessor to preprocess audio and decode model outputs.
         """
-        self.model: TFWhisperForConditionalGeneration = model
+        self.model: WhisperForConditionalGeneration = model
         self.processor: WhisperProcessor = processor
         self.input_features = None
         self.segments = None
@@ -60,9 +61,15 @@ class STTTranscriber:
             self.processor(
                 segment,
                 sampling_rate=16_000,
-                return_tensors="tf"
-            ).input_features for _, segment in segments
+                return_tensors="pt",
+                truncation=False,
+                return_attention_mask=True,
+                padding="longest",
+
+            # ).input_features for _, segment in segments
+            ) for _, segment in segments
         ]
+        logger.info(self.input_features)
         logger.info("Audio processing complete.")
 
     def transcribe(self, initial_lang: str) -> List[Dict[str, str]]:
@@ -78,19 +85,31 @@ class STTTranscriber:
             return []
 
         transcriptions = []
+
+        gen_kwargs = {
+            # "max_new_tokens": 448,
+            "num_beams": 1,
+            "condition_on_prev_tokens": False,
+            "compression_ratio_threshold": 1.35,  # zlib compression ratio threshold (in token space)
+            "temperature": (0.0, 0.2, 0.4, 0.6, 0.8, 1.0),
+            "logprob_threshold": -1.0,
+            "no_speech_threshold": 0.6,
+            # "return_timestamps": True,
+        }
+
         for (start_time, _), features in zip(self.segments, self.input_features):
-            predicted_ids = self.model.generate(features, language=initial_lang, return_timestamps=True,
-                                                time_precision=0.02)
+            predicted_ids = self.model.generate(**features, language=initial_lang, return_timestamps=True,
+                                                time_precision=0.02, **gen_kwargs)
             result = self.processor.batch_decode(predicted_ids, output_offsets=True, skip_special_tokens=True)[0]
 
             for phrase in result['offsets']:
                 phrase_start = start_time + phrase['timestamp'][0]
                 phrase_end = start_time + phrase['timestamp'][1]
                 transcriptions.append({
-                    "start_time": format_to_srt_time(phrase_start),
-                    "end_time": format_to_srt_time(phrase_end),
-                    "duration": format_to_srt_time(phrase_end - phrase_start),
-                    "transcription": phrase['text'],
+                    "time_start": phrase_start,
+                    "time_end": phrase_end,
+                    # "duration": format_to_srt_time(phrase_end - phrase_start),
+                    "text": phrase['text'],
                 })
 
         logger.info("Transcription completed.")
@@ -117,7 +136,7 @@ class STTTranscriber:
                 predicted_ids = self.model.generate(features, language=lang)
                 translated_text = self.processor.batch_decode(predicted_ids, skip_special_tokens=True)[0]
                 translations[lang].append({
-                    "start_time": format_to_srt_time(start_time),
+                    "start_time": start_time,
                     "translated_text": translated_text,
                     "translation_language": lang
                 })
