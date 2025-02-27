@@ -15,19 +15,22 @@ scikit-learn==1.6.0
 tensorflow==2.15.0  # includes tf-keras
 huggingface-hub==0.26.5
 transformers==4.47.0
+torch==2.6.0
 
 # translate
 deep-translator==1.11.4
+sentencepiece==0.2.0
+
+# lang detection
+langdetect==1.0.9
 
 # audio / video manipulation
 pydub==0.25.1 
 librosa==0.10.2.post1
 moviepy==1.0.3
 
-# dev tools
-# ipykernel  # provides the kernel
-
-
+# srt
+pysrt==1.1.2
 
 # -> replace soon by whisper dependencies
 speechrecognition==3.12.0
