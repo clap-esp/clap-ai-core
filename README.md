@@ -28,8 +28,13 @@ clap-ai-core/
 
 ```bash
 # ativer le virtual env à la racine du projet
-python -m venv env
-source env/Scripts/activate
+# - linux
+python3 -m venv venv
+source env/bin/activate
+# - windows
+python -m venv venv
+source venv/Scripts/activate
+
 
 # installer les lib
 pip install -r requirements.txt
@@ -39,17 +44,27 @@ deactivate
 
 # API scripts
 cd API
-# first, launch the transcription
-python app_transcription.py
-# launch the derush process
+
+# 1). launch the transcription with a video file path argument
+# Examples:
+python API/app_transcription.py " ~/product_management.mp4"
+python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4"
+
+# 2). launch the derush process
 python app_derush.py
-# launch the traduction
-python app_translate.py
+
+# 3). run the tanslation with a target language code (dest_lang) argument
+# Example:
+#   python API/app_translation.py es   # Spanish
+#   python API/app_translation.py ar   # Arabic
+# To see the full list of valid language codes, check the mapping system here API/utils/map_lang.py
+python app_translate.py el
 
 # for dev, use test_dev_<scripts>
 # for test the functions one by one and debug log
-python test_dev_transcription.py
+python test_dev_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4"
 python test_dev_derush.py
+python test_dev_translate.py el
 
 ```
 
@@ -69,10 +84,11 @@ Ce fichier contient les secrets (ex clé d'API). Il ne doit jamais être push su
 
 1. Speech to Text
 2. NER
-🚧 en construction ...
+   🚧 en construction ...
 
 ## Architerture
 
+🚧 en construction ...
 Le script app.py génère un fichier final_format.json disponible pour l'UI
 
 ## Dataset
