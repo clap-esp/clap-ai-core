@@ -1,89 +1,108 @@
 import os
-from deep_translator import GoogleTranslator
+import json
+from langdetect import detect
+from utils.lang_map import get_m2m100_code
+from utils.srt_functions import json_to_srt_transcription 
+from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
 
-def translate_srt_file(input_path, output_path, src_lang, dest_lang):
-    print(f"Translating {input_path} -> {src_lang}")
-    print(f"Output file: {output_path} -> {dest_lang}")
-    # open both the input and output files
-    with open(input_path, 'r', encoding='utf-8') as infile, open(output_path, 'w', encoding='utf-8') as outfile:
-        for line in infile:
-            striped = line.strip()
-            # check if the line is a number, timecode, or empty
-            if striped.isdigit() or '-->' in striped or striped == '':
-                outfile.write(line)  # write this line
-            else:
-                # translate the text line and write the result
-                if striped:  # is not empty
-                    translated_text = GoogleTranslator(source=src_lang, target=dest_lang).translate(striped)
-                    outfile.write(translated_text + '\n')
-                else:
-                    outfile.write('\n')  # write an empty line if the original line was empty
+debug_mode = True
+def log(message):
+    if debug_mode:
+        print(message)
 
 
+def translate_to_srt(input_path, output_path, src_lang, dest_lang, max_length=128):
+    print("\nProcessing Traduction in progress...\n")
 
-# def multilang_srt(data_multilang, output_folder="srt_files"):
-#     os.makedirs(output_folder, exist_ok=True)
+    mapped_src_lang = get_m2m100_code(src_lang)
+    if mapped_src_lang is None:
+        print(f"Error: source language {src_lang} is not supported")
+        exit(1)
+    src_lang = mapped_src_lang
+
+    # Conversion of destination language to M2M100 code
+    mapped_dest_lang = get_m2m100_code(dest_lang)
+    if mapped_dest_lang is None:
+        print(f"Error: destination language {dest_lang} is not supported")
+        exit(1)
+    dest_lang = mapped_dest_lang
+
+    # Loading tokenizer and model
+    tokenizer = M2M100Tokenizer.from_pretrained("./models/m2m100_418M")
+    model = M2M100ForConditionalGeneration.from_pretrained("./models/m2m100_418M")
+    model.to("cpu")
     
-#     if os.path.exists(output_folder):
-#         print(f"Dossier '{output_folder}' existe déjà ou a été créé.")
-
-#     srt_files = {}
+    # Configuring source and target languages ​​in the tokenizer
+    tokenizer.src_lang = src_lang
+    tokenizer.tgt_lang = dest_lang
     
-#     for lang_data in data_multilang:
-#         lang = lang_data["lang"]
-#         filename = f"{output_folder}/subtitles_{lang}.srt"
-        
-#         if os.path.exists(filename):
-#             print(f"Fichier '{filename}' existe déjà.")
-#         else:
-#             print(f"Création du fichier '{filename}'.")
+    # Retrieve the ID of the forced token corresponding to the target language
+    forced_bos_token_id = tokenizer.get_lang_id(dest_lang)
 
-#         srt_content = ""
-#         for i, item in enumerate(lang_data["transcription"], start=1):
-#             srt_content += f"{i}\n"
-#             srt_content += f"{item['start_time']} --> {item['end_time']}\n"
-#             srt_content += f"{item['subtitles']}\n\n"
-        
-#         with open(filename, mode="w", encoding="utf-8") as file:
-#             file.write(srt_content)
-        
-#         srt_files[lang] = filename
+    with open(input_path, 'r', encoding='utf-8') as file:
+        json_input = json.load(file)
 
-#     return srt_files
+    # Extraction of texts to translate
+    texts_to_translate = [entry["text"] for entry in json_input]
+    log(f"\n---> texts_to_translate")
+    log(texts_to_translate)
 
-# data_multilang = [
-#     {
-#         "lang": "en",
-#         "transcription": [
-#             {
-#                 "start_time": "00:05:00,400",
-#                 "end_time": "00:05:15,300",
-#                 "subtitles": "This is an example of a subtitle.",
-#             },
-#             {
-#                 "start_time": "00:05:16,400",
-#                 "end_time": "00:05:25,300",
-#                 "subtitles": "This is an example of a subtitle - 2nd subtitle.",
-#             },
-#         ]
-#     },
-#     {
-#         "lang": "fr",
-#         "transcription": [
-#             {
-#                 "start_time": "00:05:00,400",
-#                 "end_time": "00:05:15,300",
-#                 "subtitles": "Ceci est un exemple de sous-titre.",
-#             },
-#             {
-#                 "start_time": "00:05:16,400",
-#                 "end_time": "00:05:25,300",
-#                 "subtitles": "Ceci est un exemple de sous-titre - 2e sous-titre.",
-#             },
-#         ]
-#     },
-# ]
+    # Preparing inputs for translation
+    inputs = tokenizer(texts_to_translate, return_tensors="pt", padding=True, truncation=True, max_length=max_length).to("cpu")
+    outputs = model.generate(**inputs, max_length=max_length, forced_bos_token_id=forced_bos_token_id)
 
-# srt_files = multilang_srt(data_multilang)
-# #for lang, file_path in srt_files.items():
-#     #print(f"SRT file for {lang} generated at: {file_path}")
+    # Decoding of translated texts
+    translated_texts = [tokenizer.decode(g, skip_special_tokens=True) for g in outputs]
+    log(f"\n---> Translated_texts")
+    log(translated_texts)
+
+    # Reintegration of translated texts into the original JSON
+    translation_index = 0
+    for entry in json_input:
+        entry["text"] = translated_texts[translation_index]
+        translation_index += 1
+    log(f"\n---> json_input")
+    log(json_input)
+
+    # Converting translated JSON to SRT format using the json_to_srt_transcription function
+    srt_result = json_to_srt_transcription(json_input)
+    
+    # Saving SRT result to output file
+    with open(output_path, 'w', encoding='utf-8') as srt_file:
+        srt_file.write(srt_result)
+    
+    print(f"\nThe SRT file was saved as: {output_path}")
+
+
+
+def detect_lang(input_path):
+    """
+    Detects the language  using `langdetect` of text in the output STT JSON file
+    Reads the file and extracts the first 15 non-empty text entries
+    Returns str: language code (e.g., "en", "fr") or "unknown" if insufficient text
+    """
+    print("\nDetecting language...")
+    if not os.path.isfile(input_path):
+        print(f"The file {input_path} does not exist.")
+        exit(1)
+    else:
+        # Check if the file is empty
+        if os.path.getsize(input_path) == 0:
+            print(f"The file {input_path} is empty. Please regenerate the transcription")
+            exit(1)
+    
+    with open(input_path, "r", encoding="utf-8") as f:
+        json_data = json.load(f)
+
+    first_ten_texts = [item["text"] for item in json_data[:15] if item["text"].strip()]
+
+    if first_ten_texts:
+        combined_text = " ".join(first_ten_texts)
+        lang_detected = detect(combined_text)
+        lang = lang_detected
+        print(f"💬 Detected language: {lang}")
+    else:
+        lang = "unknown"
+        print("Not enough text to detect the language")
+
+    return lang
