@@ -1,11 +1,20 @@
 import os
-import numpy as np
-from transformers import BertTokenizerFast, TFBertForTokenClassification
-from sklearn.preprocessing import LabelEncoder
+import logging
+# Suppress TensorFlow logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['AUTOGRAPH_VERBOSITY'] = '0'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 import tensorflow as tf
+from transformers import BertTokenizerFast, TFBertForTokenClassification
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+logging.getLogger("tensorflow").setLevel(logging.ERROR)
+logging.getLogger("transformers").setLevel(logging.ERROR)
 
 
-debug_mode = True
+debug_mode = None
 def log(message):
     if debug_mode:
         print(message)
