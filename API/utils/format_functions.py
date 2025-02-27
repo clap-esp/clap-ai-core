@@ -1,6 +1,4 @@
-debug_mode = True
-
-def compute_and_segment(data):
+def compute_and_segment(data, debug_mode):
     """ Method for segments the input data based on labels, 
         calculates start times and durations for each segment, 
         estimating timestamps from a B-X position, 
@@ -94,5 +92,5 @@ def compute_and_segment(data):
             log(f"  Labels: {labels_segment}")
 
         item_index += 1
-    print("\nFormat processing completed\n")
+    print("Format processing completed")
     return output_data
