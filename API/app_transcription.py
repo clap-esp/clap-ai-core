@@ -51,14 +51,20 @@ print(f"\nJSON output STT saved in {OUTPUT_STT_PATH}")
 # ↓
 # AUTO DETECT LANG SOURCE
 src_lang = detect_lang(OUTPUT_STT_PATH)
-str_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'exports', f'app_subtitles_{src_lang}.srt'))
+str_path_srt = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'exports', f'app_subtitles_{src_lang}.srt'))
+str_path_json = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'exports', f'app_subtitles_{src_lang}.json'))
 
 # ↓
-# SRT
+# SRT + JSON
 subtitles = json_to_srt_transcription(stt_result)
-with open(str_path, "w", encoding="utf-8") as f:
+
+with open(str_path_srt, "w", encoding="utf-8") as f:
     f.write(subtitles)
-print(f"\nSRT output saved in {str_path}")
+print(f"\nSRT output saved in {str_path_srt}")
+
+with open(str_path_json, "w", encoding='utf-8') as json_file:
+    json.dump(stt_result, json_file, ensure_ascii=False, indent=4)
+print(f"\nJSON output saved in {str_path_json}")
 
 
 # ↓
