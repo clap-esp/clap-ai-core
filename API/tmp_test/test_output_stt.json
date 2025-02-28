@@ -1,0 +1,52 @@
+[
+    {
+        "time_start": 0.0,
+        "time_end": 4.0,
+        "text": "Bonjour, comment vas-tu ?"
+    },
+    {
+        "time_start": 4.0,
+        "time_end": 8.0,
+        "text": "Il fait beau aujourd'hui."
+    },
+    {
+        "time_start": 8.0,
+        "time_end": 12.0,
+        "text": "J'aime beaucoup ce paysage."
+    },
+    {
+        "time_start": 12.0,
+        "time_end": 16.0,
+        "text": "Nous marchons tranquillement."
+    },
+    {
+        "time_start": 16.0,
+        "time_end": 20.0,
+        "text": "Regarde cet oiseau dans le ciel."
+    },
+    {
+        "time_start": 20.0,
+        "time_end": 24.0,
+        "text": "La nature est magnifique."
+    },
+    {
+        "time_start": 24.0,
+        "time_end": 28.0,
+        "text": "Écoute le bruit de l'eau."
+    },
+    {
+        "time_start": 28.0,
+        "time_end": 32.0,
+        "text": "Le vent souffle doucement."
+    },
+    {
+        "time_start": 32.0,
+        "time_end": 36.0,
+        "text": "Nous allons bientôt arriver."
+    },
+    {
+        "time_start": 36.0,
+        "time_end": 40.0,
+        "text": "C'était une belle journée."
+    }
+]

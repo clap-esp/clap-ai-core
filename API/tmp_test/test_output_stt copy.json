@@ -1,113 +1,8 @@
 [
     {
-        "time_start": 0.0,
-        "time_end": 4.0,
-        "text": "[Bruit]"
-    },
-    {
-        "time_start": 4.0,
-        "time_end": 8.0,
-        "text": "[Bruit]"
-    },
-    {
-        "time_start": 8.0,
-        "time_end": 12.0,
-        "text": "bonjour à tous bah moi je suis dans le"
-    },
-    {
-        "time_start": 12.0,
-        "time_end": 16.0,
-        "text": "la queue ça veut dire que je n'ai jamais codé une ligne"
-    },
-    {
-        "time_start": 16.0,
-        "time_end": 20.0,
-        "text": "le code depuis que de ma"
-    },
-    {
-        "time_start": 20.0,
-        "time_end": 24.0,
-        "text": "tu m'aimes donc moi je suis plutôt que des produits donc"
-    },
-    {
-        "time_start": 24.0,
-        "time_end": 28.0,
-        "text": "je suis consultant produits chez Zenika et"
-    },
-    {
-        "time_start": 28.0,
-        "time_end": 32.0,
-        "text": "bah après maintes et maintes relances de Jul me voici ici"
-    },
-    {
-        "time_start": 32.0,
-        "time_end": 36.0,
-        "text": "[Bruit]"
-    },
-    {
-        "time_start": 36.0,
-        "time_end": 40.0,
-        "text": "non et donc je vais vous parler de produit management à qui ça parle le produit"
-    },
-    {
-        "time_start": 40.0,
-        "time_end": 44.0,
-        "text": "bah j'ai bien fait de"
-    },
-    {
-        "time_start": 44.0,
-        "time_end": 48.0,
-        "text": "[Bruit]"
-    },
-    {
-        "time_start": 48.0,
-        "time_end": 52.0,
-        "text": "vraiment l'objectif de vous faire vraiment une présentation"
-    },
-    {
-        "time_start": 52.0,
-        "time_end": 56.0,
-        "text": "[Bruit]"
-    },
-    {
-        "time_start": 56.0,
-        "time_end": 60.0,
-        "text": "je vais bien sûr tout vous apprendre et"
-    },
-    {
-        "time_start": 60.0,
-        "time_end": 64.0,
-        "text": "dis montrer que bah les développeurs ils ont aussi un recréer"
-    },
-    {
-        "time_start": 64.0,
-        "time_end": 68.0,
-        "text": "dans cette approche de product management"
-    },
-    {
         "time_start": 68.0,
         "time_end": 72.0,
         "text": "qu'est-ce que c'est le produit management le produit management c'est une approche de création et d'innovation"
-    },
-    {
-        "time_start": 72.0,
-        "time_end": 76.0,
-        "text": "mets-moi centré est dirigé sur le produit là vous allez me dire"
-    },
-    {
-        "time_start": 76.0,
-        "time_end": 80.0,
-        "text": "qu'est-ce que c'est le produit Eva le produit"
-    },
-    {
-        "time_start": 80.0,
-        "time_end": 84.0,
-        "text": "pétasse ça peut être un service ou un bien qui répond à un besoin"
-    },
-    {
-        "time_start": 84.0,
-        "time_end": 88.0,
-        "text": "spécifique d'un ou plusieurs utilisateurs"
     },
     {
         "time_start": 88.0,
@@ -117,27 +12,12 @@
     {
         "time_start": 92.0,
         "time_end": 96.0,
-        "text": "donc en quoi vraiment consiste"
-    },
-    {
-        "time_start": 96.0,
-        "time_end": 100.0,
-        "text": "bah c'est ça se retrouve en fait"
-    },
-    {
-        "time_start": 100.0,
-        "time_end": 104.0,
-        "text": "mets au centre vraiment de 3"
-    },
-    {
-        "time_start": 104.0,
-        "time_end": 108.0,
-        "text": "tu m'aimes que sont le business le marketing savoir en fait bah"
+        "text": "donc en quoi vraiment ça consiste ?"
     },
     {
         "time_start": 108.0,
         "time_end": 112.0,
-        "text": "on a un produit l'objectif c'est de vendre comment on va le vendre à qui on s'adresse"
+        "text": "on a un produit et l'objectif c'est comment on va le vendre à qui on s'adresse"
     },
     {
         "time_start": 112.0,
@@ -145,24 +25,14 @@
         "text": "à quel marché"
     },
     {
-        "time_start": 116.0,
-        "time_end": 120.0,
-        "text": "chiffre d'affaires on compte faire de quelle manière on va vendre le"
-    },
-    {
-        "time_start": 120.0,
-        "time_end": 124.0,
-        "text": "pays avec quel pricing ou autres donc en fait il y a tout cette réflexion là"
-    },
-    {
         "time_start": 124.0,
         "time_end": 128.0,
-        "text": "il y a la partie design comment on fait on va"
+        "text": "il y a la partie design, comment on pose une expérience aux utilisateurs"
     },
     {
         "time_start": 128.0,
         "time_end": 132.0,
-        "text": "poser une expérience aux utilisateurs pour que"
+        "text": " pour que"
     },
     {
         "time_start": 132.0,
@@ -627,7 +497,7 @@
     {
         "time_start": 500.0,
         "time_end": 504.0,
-        "text": "10 minutes sur la vision"
+        "text": "minutes sur la vision"
     },
     {
         "time_start": 504.0,
@@ -727,7 +597,7 @@
     {
         "time_start": 580.0,
         "time_end": 584.0,
-        "text": "du succès de notre produit"
+        "text": "du succès de notre produit un"
     },
     {
         "time_start": 584.0,

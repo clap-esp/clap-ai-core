@@ -1,7 +1,10 @@
 # secrets
 .env
 
-# python env
+# python venv
 env
+venv
+.venv
+
 
 .idea

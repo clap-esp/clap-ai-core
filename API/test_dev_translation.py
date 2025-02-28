@@ -7,15 +7,17 @@ from utils.lang_functions import translate_to_srt
 # This program is used to translate into a target language
 
 # How to run the script with a language code argument:
-#   Ex (Spanish): `python API/app_translation.py es`
+#   Ex (Spanish): 
+#   python API/app_translation.py es
 #   Make sure the language code is supported in `API/utils/map_lang.py`
 
 
 # ↓
 # READ current source language
-CURRENT_SRC_LANG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_current_src_lang.txt'))
+CURRENT_SRC_LANG_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_current_src_lang.txt')
 with open(CURRENT_SRC_LANG_PATH, "r", encoding="utf-8") as lang_file:
     src_lang = lang_file.read().strip()
+str_path = os.path.join(os.path.dirname(__file__), f"tmp_test/test_subtitles_{src_lang}.srt")
 
 
 # ↓ CHECK `dest_lang` -> target language argument
@@ -27,8 +29,8 @@ else:
 
 # ↓
 # TRANSLATE
-TEXT_TO_TRANSLATE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt.json'))
-SRT_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'exports', f"app_subtitles_{dest_lang}.srt"))
+TEXT_TO_TRANSLATE_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_output_stt.json')
+SRT_OUTPUT_PATH = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{dest_lang}.srt')
 
 print(f"🔍 Source language: {src_lang}")
 print(f"🏁 Destination language: {dest_lang}")
