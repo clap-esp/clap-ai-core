@@ -9,16 +9,30 @@ def log(message):
         print(message)
 
 
-def process_stt(): # for whisper
+def process_stt(audio_file_path): # for whisper
     pass
+
+    # utiliser ce path pour les chunk
+    # tmp_dir = os.path.join(os.path.dirname(__file__), '..', 'tmp')
+    # chunks_dir = os.path.join(tmp_dir, 'chunks')
+    # if not os.path.exists(chunks_dir):
+    #     os.makedirs(chunks_dir)
+
+    # audio = AudioSegment.from_wav(audio_file_path)
+
+
+
+
 
 def process_stt_deprecated(audio_file_path, chunk_length_ms=4000):
     """Process the audio file and return a list of transcribed sentences with timestamps"""
-    print(f"Processing audio file: {audio_file_path}")
-    print(f"Processing in progress...")
+    print(f"\nProcessing STT in progress...")
 
-    chunks_dir = os.path.join(os.getcwd(), "chunks")
-    create_chunks_directory(chunks_dir)
+    # Path
+    tmp_dir = os.path.join(os.path.dirname(__file__), '..', 'tmp')
+    chunks_dir = os.path.join(tmp_dir, 'chunks')
+    if not os.path.exists(chunks_dir):
+        os.makedirs(chunks_dir)
 
     audio = AudioSegment.from_wav(audio_file_path)
 
@@ -58,10 +72,10 @@ def process_stt_deprecated(audio_file_path, chunk_length_ms=4000):
     return results
 
 
-def recognize(audio_data, recognizer, language='fr-FR'):
-    """Method to recognize speech with audio chunk."""
+def recognize(audio_data, recognizer):
+    """Method to recognize speech with audio chunk"""
     try:
-        text = recognizer.recognize_google(audio_data, language=language)
+        text = recognizer.recognize_google(audio_data)
         return text
     except sr.UnknownValueError:
         return "[Bruit]" # by default... this is temporary !!!
@@ -69,6 +83,6 @@ def recognize(audio_data, recognizer, language='fr-FR'):
         return f"Error requesting Google service: {e}"
 
 def create_chunks_directory(dir_path):
-    """Create the audio segment directory."""
+    """Create the audio segment directory"""
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
