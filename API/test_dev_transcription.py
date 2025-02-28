@@ -14,8 +14,8 @@ from utils.srt_functions import json_to_srt_transcription
 
 # How to run the script with a video file path argument in you console:
 #   cd ~/Desktop/CLAP_DEV/clap-ai-core/
-#   python API/app_transcription.py " ~/product_management.mp4"
-#   python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4"
+#   python API/test_dev_transcription.py " ~/product_management.mp4"
+#   python API/test_dev_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4"
 
 
 debug_mode = True  # Debug mode setting
@@ -30,7 +30,7 @@ if len(sys.argv) > 1:
     if not os.path.exists(video_path):
         raise FileNotFoundError(f"Error: File '{video_path}' not found. Please check the path")
 else:
-    raise ValueError("Missing video file path. Usage: python API/app_transcription.py <video_path>")
+    raise ValueError("Missing video file path. Usage: python API/test_dev_transcription.py <video_path>")
 
 
 # # ↓
@@ -55,22 +55,27 @@ print(f"📥 JSON output STT saved in {OUTPUT_STT_PATH}")
 # AUTO DETECT LANG SOURCE
 start_time = time.time()
 src_lang = detect_lang(OUTPUT_STT_PATH)
-str_path = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{src_lang}.srt')
-print(f"srt_path: {str_path}")
+str_path_srt = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{src_lang}.srt')
+str_path_json = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{src_lang}.json')
+print(f"srt_path: {str_path_srt}")
 print(f"\n⏰ AUTO DETECT LANG process took {time.time() - start_time:.2f} seconds")
 
 
 # ↓
-# SRT
+# SRT + JSON
 start_time = time.time()
 with open(OUTPUT_STT_PATH, "r", encoding="utf-8") as f:
     json_data = json.load(f)
 
+with open(str_path_json, "w", encoding='utf-8') as f:
+    json.dump(json_data, f, ensure_ascii=False, indent=4)
+
 subtitles = json_to_srt_transcription(json_data)
-with open(str_path, "w", encoding="utf-8") as f:
+with open(str_path_srt, "w", encoding="utf-8") as f:
     f.write(subtitles)
-print(f"\n⏰ SRT process took {time.time() - start_time:.2f} seconds")
-print(f"📥 SRT output saved in {str_path}")
+print(f"\n⏰ SRT + JON process took {time.time() - start_time:.2f} seconds")
+print(f"\n📥 JSON output saved in {str_path_json}")
+print(f"📥 SRT output saved in {str_path_srt}")
 
 
 # ↓
