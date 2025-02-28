@@ -11,7 +11,7 @@ def log(message):
         print(message)
 
 
-def translate_to_srt(input_path, output_path, src_lang, dest_lang, max_length=128):
+def translate_str_and_json(input_path, srt_output_path, json_output_path, src_lang, dest_lang, max_length=128):
     print("\nProcessing Traduction in progress...\n")
 
     mapped_src_lang = get_m2m100_code(src_lang)
@@ -68,10 +68,14 @@ def translate_to_srt(input_path, output_path, src_lang, dest_lang, max_length=12
     srt_result = json_to_srt_transcription(json_input)
     
     # Saving SRT result to output file
-    with open(output_path, 'w', encoding='utf-8') as srt_file:
+    with open(srt_output_path, 'w', encoding='utf-8') as srt_file:
         srt_file.write(srt_result)
-    
-    print(f"\nThe SRT file was saved as: {output_path}")
+    print(f"\nSRT output file saved in {srt_output_path}")
+
+    # Saving JSON result to output file
+    with open(json_output_path, 'w', encoding='utf-8') as json_file:
+        json.dump(json_input, json_file, ensure_ascii=False, indent=4)
+    print(f"\nJSON output file saved in {json_output_path}")
 
 
 
