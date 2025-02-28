@@ -372,7 +372,7 @@ def seconds_to_timestamp(seconds: float) -> str:
     milliseconds = int((seconds - int(seconds)) * 1000)
     return f"{hours:02d}:{minutes:02d}:{secs:02d},{milliseconds:03d}"
 
-def translate_to_srt(
+def translate_str_and_json(
     audio_file: str,
     output_file: str,
     model_local_path: str = "./models/whisper-base",
@@ -446,7 +446,7 @@ if __name__ == "__main__":
     audio_file = "./API/tmp/audio_before_derush/audio_extrait.wav"
     output_file = "transcription.srt"
 
-    translate_to_srt(
+    translate_str_and_json(
         audio_file=audio_file,
         output_file=output_file,
         model_local_path="./models/whisper-base",
