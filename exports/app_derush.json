@@ -1,0 +1,158 @@
+[
+    {
+        "start_time": 0.0,
+        "duration": 0.67,
+        "words": [ "so" ],
+        "labels": [ "B-INT" ],
+        "event": "INT"
+    },
+    {
+        "start_time": 0.67,
+        "duration": 3.33,
+        "words": [ "day","one","we","made","it" ],
+        "labels": [ "O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 4.0,
+        "duration": 4.0,
+        "words": [ "fucking","rain","pouring","wet","it","was" ],
+        "labels": [ "O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 8.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 12.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 16.0,
+        "duration": 4.0,
+        "words": [ "are","totally","wet","socks","totally","what","you","have","to","bring","them" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 20.0,
+        "duration": 4.0,
+        "words": [ "it","was","a","torrential","downpour","no","chance","so","next","time" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 24.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 28.0,
+        "duration": 0.89,
+        "words": [ "because","well" ],
+        "labels": [ "B-INT","I-INT" ],
+        "event": "INT"
+    },
+    {
+        "start_time": 28.89,
+        "duration": 3.11,
+        "words": [ "I","think","my","socks","got","wet","from" ],
+        "labels": [ "O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 32.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 36.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 40.0,
+        "duration": 4.0,
+        "words": [ "it","'","s","a","torrential","downpour","and","none","of","the","camera","stuff","is" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 44.0,
+        "duration": 4.0,
+        "words": [ "it","was" ],
+        "labels": [ "O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 48.0,
+        "duration": 4.0,
+        "words": [ "easier","than","expected","so","it","was","a","bit","of","a" ],
+        "labels": [ "O","O","O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 52.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 56.0,
+        "duration": 4.0,
+        "words": [ "it","'","s","a","52","on","site","done" ],
+        "labels": [ "O","O","O","O","O","O","O","O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 60.0,
+        "duration": 4.0,
+        "words": [ "record" ],
+        "labels": [ "O" ],
+        "event": "O"
+    },
+    {
+        "start_time": 64.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 68.0,
+        "duration": 4.0,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    },
+    {
+        "start_time": 72.0,
+        "duration": 1.96,
+        "words": [ "[","Bruit","]"
+        ],
+        "labels": [ "B-NOI","I-NOI","I-NOI" ],
+        "event": "NOI"
+    }
+]

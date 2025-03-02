@@ -18,7 +18,7 @@ def json_to_srt_derush(json_data):
                 "words": [string...]
             }
     """
-    print("Subtitles conversion in progress...")
+    print("\nSubtitles conversion in progress...")
     srt_lines = []
     for i, segment in enumerate(json_data, start=1):
         start = segment["start_time"]
@@ -49,7 +49,7 @@ def json_to_srt_transcription(json_data):
             "text": "bienvenue tout le monde dans ce talk"
         }
     """
-    print("Subtitles conversion in progress...")
+    print("\nSubtitles conversion in progress...")
     srt_lines = []
     for i, segment in enumerate(json_data, start=1):
         start = segment["time_start"]
