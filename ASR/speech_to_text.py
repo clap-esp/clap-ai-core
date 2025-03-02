@@ -62,9 +62,9 @@ class STTTranscriber:
                 segment,
                 sampling_rate=16_000,
                 return_tensors="pt",
-                truncation=False,
-                return_attention_mask=True,
-                padding="longest",
+                # truncation=False,
+                # return_attention_mask=True,
+                # padding="longest",
 
             ).input_features for _, segment in segments
             # ) for _, segment in segments
@@ -98,8 +98,10 @@ class STTTranscriber:
         }
 
         for (start_time, _), features in zip(self.segments, self.input_features):
-            predicted_ids = self.model.generate(**features, language=initial_lang, return_timestamps=True,
-                                                time_precision=0.02, **gen_kwargs)
+            predicted_ids = self.model.generate(features, language=initial_lang, return_timestamps=True,
+            # predicted_ids = self.model.generate(**features, language=initial_lang, return_timestamps=True,
+            #                                     time_precision=0.02, **gen_kwargs)
+                                                time_precision=0.02,)
             result = self.processor.batch_decode(predicted_ids, output_offsets=True, skip_special_tokens=True)[0]
 
             for phrase in result['offsets']:
