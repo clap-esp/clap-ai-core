@@ -1,12 +1,14 @@
 import os
+import sys
 import json
 import torch
 
 from pathlib import Path
+
 from transformers import WhisperForConditionalGeneration, AutoProcessor
 
 from utils.audio_extractor import extract_audio_from_video
-from utils.stt_functions import process_stt_deprecated, process_stt # replace with process_stt
+from utils.stt_functions import process_stt_deprecated, process_stt
 from utils.srt_functions import json_to_srt_transcription
 
 
@@ -52,23 +54,27 @@ from utils.srt_functions import json_to_srt_transcription
 
 if __name__ == '__main__':
 
-    # lang = "fr"
-    lang = "fr"
+    if len(sys.argv) > 2:
+        video_path: str = sys.argv[1]
+        lang: str = sys.argv[2]
+        if not os.path.exists(video_path):
+            raise FileNotFoundError(f"Error: Please check '{video_path}' path.")
+    else:
+        raise ValueError("Missing video file path or video source language. Usage: python API/app_transcription.py <video_path> <language>")
 
-    video_path = "/home/alain/Downloads/product_management.mp4"
     str_path = os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{lang}.srt')
     OUTPUT_STT_PATH = os.path.join(os.path.dirname(__file__), 'app_stt_output.json')
 
     # STT Dependencies
+    model_id = "openai/whisper-base"
     whisper_save_dir: str = str((Path.cwd().parent / "models/whisper-base").resolve())  # Change to whisper save dir
 
-    whisper_processor = AutoProcessor.from_pretrained("openai/whisper-base")
-    whisper_model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base")
+    whisper_processor = AutoProcessor.from_pretrained(f"{whisper_save_dir}/processor")
+    whisper_model = WhisperForConditionalGeneration.from_pretrained(f"{whisper_save_dir}/model")
+
     device = torch.device("cpu")
     whisper_model.to(device)
-
-    # whisper_processor = AutoProcessor.from_pretrained(f"{whisper_save_dir}/processor")
-    # whisper_model = WhisperForConditionalGeneration.from_pretrained(f"{whisper_save_dir}/model")
+    whisper_model.generation_config.forced_decoder_ids = None
 
     transcription = process_stt(
         video_path=video_path,
