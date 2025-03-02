@@ -11,15 +11,20 @@ from moviepy.video.io.VideoFileClip import VideoFileClip
 
 
 logger = build_logger("Audio_Extractor", level=20)
-output_audio_path = os.path.join(os.path.dirname(__file__), '..', 'audio_before_derush', 'audio_extrait.wav')
+
+OUTPUT_AUDIO_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'tmp', 'audio_before_derush'))
 
 def extract_audio_from_video(video_path):
-    video = VideoFileClip(video_path)
-    audio = video.audio
-    audio.write_audiofile(output_audio_path, codec='pcm_s16le')  # WAV format
-    video.close()
-    audio.close()
-
+    # Path
+    print(f"\nProcessing extraction in progress...")
+    os.makedirs(OUTPUT_AUDIO_DIR, exist_ok=True)
+    output_audio_path = os.path.join(OUTPUT_AUDIO_DIR, 'audio_extrait.wav')
+    # Extract audio
+    clip = VideoFileClip(video_path)
+    audio = clip.audio
+    # Save WAV
+    audio.write_audiofile(output_audio_path, codec='pcm_s16le')
+    clip.close()
 
 def extract_audio(file_path: Union[str, Tuple[int, np.ndarray]]) -> Tuple[np.ndarray, int | float]:
     """
