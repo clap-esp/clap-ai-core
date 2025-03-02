@@ -5,7 +5,7 @@ import numpy as np
 from typing import Tuple, List, Union
 from tempfile import NamedTemporaryFile
 
-from API.utils.logger import build_logger
+from .logger import build_logger
 from moviepy.audio.io.AudioFileClip import AudioFileClip
 from moviepy.video.io.VideoFileClip import VideoFileClip
 

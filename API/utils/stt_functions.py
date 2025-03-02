@@ -5,8 +5,8 @@ from pydub import AudioSegment
 
 from transformers import WhisperForConditionalGeneration, WhisperProcessor
 
-from ASR.speech_to_text import STTTranscriber
-from API.utils.audio_extractor import extract_audio_features
+from .speech_to_text import STTTranscriber
+from .audio_extractor import extract_audio_features
 
 debug_mode = None
 def log(message):
