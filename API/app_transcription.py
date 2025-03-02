@@ -27,14 +27,14 @@ if __name__ == '__main__':
     else:
         raise ValueError("Missing video file path or video source language. Usage: python API/app_transcription.py <video_path> <language>")
 
-    str_path = os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{lang}.srt')
+    str_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt.json'))
     OUTPUT_STT_PATH = os.path.join(os.path.dirname(__file__), 'app_stt_output.json')
     
     start_time = time.time()
 
     # STT Dependencies
     model_id = "openai/whisper-base"
-    whisper_save_dir: str = str((Path.cwd().parent / "models/whisper-base").resolve())  # Change to whisper save dir
+    whisper_save_dir: str = str((Path.cwd() / "models/whisper-base").resolve())  # Change to whisper save dir
 
     whisper_processor = AutoProcessor.from_pretrained(f"{whisper_save_dir}/processor")
     whisper_model = WhisperForConditionalGeneration.from_pretrained(f"{whisper_save_dir}/model")

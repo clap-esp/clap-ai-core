@@ -3,7 +3,7 @@ import numpy as np
 from typing import Tuple, List, Dict
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
 
-from API.utils.logger import build_logger
+from .logger import build_logger
 
 logger = build_logger("SpeechToText", level=20)
 
