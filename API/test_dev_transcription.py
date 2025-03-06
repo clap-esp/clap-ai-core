@@ -2,53 +2,47 @@ import os
 import sys
 import json
 import time
-from utils.audio_extractor import extract_audio_from_video
-from utils.stt_functions import process_stt_deprecated  # replace with process_stt
+import torch
 from utils.lang_functions import detect_lang
+from utils.stt_functions import process_stt
 from utils.srt_functions import json_to_srt_transcription
+from pathlib import Path
+from transformers import WhisperForConditionalGeneration, AutoProcessor
 
 
 # TRANSCRIPTION process - test
 # This program is used for testing the script in dev mode 
 # --> you can comment all the process and uncomment the one you want to test separately
 
-# How to run the script with a video file path argument in you console:
+# How to run the script with a video file path and source lang arguments in you console :
 #   cd ~/Desktop/CLAP_DEV/clap-ai-core/
-#   python API/test_dev_transcription.py " ~/product_management.mp4"
-#   python API/test_dev_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4"
+#   python API/test_dev_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" en
+#   python API/test_dev_transcription.py "~/Julie_Ng--Rain_rain_and_more_rain.mp4" en
 
 
 debug_mode = True  # Debug mode setting
-audio_path_wav = os.path.join(os.path.dirname(__file__), 'tmp', 'audio_before_derush', 'audio_extrait.wav')
 OUTPUT_STT_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_output_stt.json')
 CURRENT_SRC_LANG_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_current_src_lang.txt')
 
 
-# ↓ CHECK `video_path`
-if len(sys.argv) > 1:
-    video_path = os.path.abspath(sys.argv[1])  # Convert to absolute path
+# ↓ CHECK `video_path` and `lang`
+if len(sys.argv) > 2:
+    video_path: str = sys.argv[1]
+    lang: str = sys.argv[2]
     if not os.path.exists(video_path):
-        raise FileNotFoundError(f"Error: File '{video_path}' not found. Please check the path")
+        raise FileNotFoundError(f"Error: Please check '{video_path}' path.")
 else:
-    raise ValueError("Missing video file path. Usage: python API/test_dev_transcription.py <video_path>")
-
-
-# # ↓
-# EXTRACT (WAV) from video
-start_time = time.time()
-extract_audio_from_video(video_path)
-print(f"\n⏰ EXTRACT WAV process took {time.time() - start_time:.2f} seconds")
+    raise ValueError("Missing video file path or source language. Usage: python API/app_transcription.py <video_path> <language>")
 
 
 # ↓
 # SPEECH-TO-TEXT (STT) PROCESS
 start_time = time.time()
-stt_result = process_stt_deprecated(audio_path_wav)  # replace with process_stt
-print(f"\n⏰ STT process took {time.time() - start_time:.2f} seconds")
-
+stt_result = process_stt(video_path, source_lang=lang)
 with open(OUTPUT_STT_PATH, 'w', encoding='utf-8') as json_file:
     json.dump(stt_result, json_file, ensure_ascii=False, indent=4)
 print(f"📥 JSON output STT saved in {OUTPUT_STT_PATH}")
+print(f"\n⏰ SPEECH-TO-TEXT process took {time.time() - start_time:.2f} seconds")
 
 
 # ↓
