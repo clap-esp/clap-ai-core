@@ -9,11 +9,10 @@ clap-ai-core/
 │
 ├── API/
 │   └── ...  # Application + methods
+│   └── models/
+│   └── exports /
 ├── data/
 │   └── ...  # Contient les datasets utilisés pour l'entraînement ou l'évaluation des modèles
-├── models/
-│   └── ...  # Contient les modèles fine tuned, disponibles pour l'api
-├── main.ipynb  # Notebook Jupyter pour exécuter et tester le code
 └── requirements.txt  # Liste des lib nécessaires pour exécuter le projet
 ```
 

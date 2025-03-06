@@ -28,8 +28,8 @@ else:
 # ↓
 # TRANSLATE
 TEXT_TO_TRANSLATE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt.json'))
-SRT_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'exports', f"app_subtitles_{dest_lang}.srt"))
-JSON_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'exports', f"app_subtitles_{dest_lang}.json"))
+SRT_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f"app_subtitles_{dest_lang}.srt"))
+JSON_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f"app_subtitles_{dest_lang}.json"))
 
 print(f"🔍 Source language: {src_lang}")
 print(f"🏁 Destination language: {dest_lang}")

@@ -1,12 +1,9 @@
 import os
 import librosa
 import numpy as np
-
 from typing import Tuple, List, Union
-from tempfile import NamedTemporaryFile
 
 from .logger import build_logger
-from moviepy.audio.io.AudioFileClip import AudioFileClip
 from moviepy.video.io.VideoFileClip import VideoFileClip
 
 
@@ -14,17 +11,6 @@ logger = build_logger("Audio_Extractor", level=20)
 
 OUTPUT_AUDIO_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'tmp', 'audio_before_derush'))
 
-def extract_audio_from_video(video_path):
-    # Path
-    print(f"\nProcessing extraction in progress...")
-    os.makedirs(OUTPUT_AUDIO_DIR, exist_ok=True)
-    output_audio_path = os.path.join(OUTPUT_AUDIO_DIR, 'audio_extrait.wav')
-    # Extract audio
-    clip = VideoFileClip(video_path)
-    audio = clip.audio
-    # Save WAV
-    audio.write_audiofile(output_audio_path, codec='pcm_s16le')
-    clip.close()
 
 def extract_audio(file_path: Union[str, Tuple[int, np.ndarray]]) -> Tuple[np.ndarray, int | float]:
     """
@@ -41,18 +27,33 @@ def extract_audio(file_path: Union[str, Tuple[int, np.ndarray]]) -> Tuple[np.nda
     """
     logger.info(f"Extracting audio from: {file_path}")
 
-    video_clip = VideoFileClip(file_path)
-    audio_clip: AudioFileClip = video_clip.audio
 
-    with NamedTemporaryFile(suffix=".wav", delete=True) as temp_audio_file:
-        audio_clip.write_audiofile(
-            temp_audio_file.name,
-            codec='pcm_s16le',
-            fps=44100
-        )
-        video_clip.close()
-        audio_clip.close()
-        audio_data = librosa.load(temp_audio_file.name, sr=16000)
+
+    if OUTPUT_AUDIO_DIR and not os.path.exists(OUTPUT_AUDIO_DIR):
+        os.makedirs(OUTPUT_AUDIO_DIR, exist_ok=True)
+    output_audio_path = os.path.join(OUTPUT_AUDIO_DIR, 'audio_extrait.wav')
+    # Extract audio
+    clip = VideoFileClip(file_path)
+    audio = clip.audio
+    # Save WAV
+    audio.write_audiofile(output_audio_path, codec='pcm_s16le')
+    audio_data=librosa.load(output_audio_path, sr=16000)
+    print(f'\naudio extracted in ===>, {output_audio_path}')
+    clip.close()
+
+
+    # video_clip = VideoFileClip(file_path)
+    # audio_clip: AudioFileClip = video_clip.audio
+
+    # with NamedTemporaryFile(suffix=".wav", delete=True) as temp_audio_file:
+    #     audio_clip.write_audiofile(
+    #         temp_audio_file.name,
+    #         codec='pcm_s16le',
+    #         fps=44100
+    #     )
+    #     video_clip.close()
+    #     audio_clip.close()
+    #     audio_data = librosa.load(temp_audio_file.name, sr=16000)
     return audio_data
 
 
