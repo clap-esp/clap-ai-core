@@ -105,8 +105,8 @@ class STTTranscriber:
             result = self.processor.batch_decode(predicted_ids, output_offsets=True, skip_special_tokens=True)[0]
 
             for phrase in result['offsets']:
-                phrase_start = start_time + phrase['timestamp'][0]
-                phrase_end = start_time + phrase['timestamp'][1]
+                phrase_start = round(start_time + phrase['timestamp'][0], 3)
+                phrase_end = round(start_time + phrase['timestamp'][1], 3)  
                 transcriptions.append({
                     "time_start": phrase_start,
                     "time_end": phrase_end,
