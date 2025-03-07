@@ -10,7 +10,8 @@ from utils.srt_functions import json_to_srt_transcription
 # This program is used for transcription
 
 # How to run the script with a video file path and source lang arguments in you console :
-#   python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4 en"
+#   python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" en
+#   python API/app_transcription.py "./video/product_management.mp4" fr
 #   python API/app_transcription.py "~/Julie_Ng--Rain_rain_and_more_rain.mp4" en
 
 debug_mode = False # Debug mode setting

@@ -46,8 +46,8 @@ cd API
 
 # 1). launch the transcription with a video file path argument
 # Examples:
-python API/app_transcription.py " ~/product_management.mp4"
-python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4"
+python API/app_transcription.py " ~/product_management.mp4" fr
+python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" en
 
 # 2). launch the derush process
 python app_derush.py
