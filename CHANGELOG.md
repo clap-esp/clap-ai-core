@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/clap-esp/clap-ai-core/compare/v1.2.0...v1.2.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* python lib ([698f925](https://github.com/clap-esp/clap-ai-core/commit/698f925b3a7985af5d730662526171e016285ac4))
+
 ## [1.2.0](https://github.com/clap-esp/clap-ai-core/compare/v1.1.0...v1.2.0) (2024-12-19)
 
 
