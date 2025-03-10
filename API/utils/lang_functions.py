@@ -1,5 +1,6 @@
 import os
 import json
+from pathlib import Path
 from langdetect import detect
 from utils.lang_map import get_m2m100_code
 from utils.srt_functions import json_to_srt_transcription 
@@ -28,8 +29,9 @@ def translate_str_and_json(input_path, srt_output_path, json_output_path, src_la
     dest_lang = mapped_dest_lang
 
     # Loading tokenizer and model
-    tokenizer = M2M100Tokenizer.from_pretrained("./models/m2m100_418M")
-    model = M2M100ForConditionalGeneration.from_pretrained("./models/m2m100_418M")
+    base_model_path = Path(__file__).resolve().parent.parent / "models" / "m2m100_418M"
+    tokenizer = M2M100Tokenizer.from_pretrained(base_model_path)
+    model = M2M100ForConditionalGeneration.from_pretrained(base_model_path)
     model.to("cpu")
     
     # Configuring source and target languages ​​in the tokenizer

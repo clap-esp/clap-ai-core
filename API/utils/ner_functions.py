@@ -20,7 +20,7 @@ def log(message):
         print(message)
 
 
-MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', '..', 'models', 'bert-base-multilingual-cased')
+MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'models', 'bert-base-multilingual-cased')
 MODEL_ABSPATH = os.path.abspath(MODEL_PATH)
 
 tokenizer = BertTokenizerFast.from_pretrained(MODEL_ABSPATH)
