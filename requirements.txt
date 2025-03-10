@@ -12,10 +12,10 @@ python-dotenv==1.0.1
 scikit-learn==1.6.0
 
 # deep learning
-tensorflow==2.15.0  # includes tf-keras
+tensorflow==2.18.0  # includes tf-keras
 huggingface-hub==0.26.5
 transformers==4.47.0
-torch==2.6.0
+torch==2.5.0
 
 # translate
 deep-translator==1.11.4
@@ -31,6 +31,3 @@ moviepy==1.0.3
 
 # srt
 pysrt==1.1.2
-
-# -> replace soon by whisper dependencies
-speechrecognition==3.12.0

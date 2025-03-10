@@ -2,73 +2,68 @@ import os
 import sys
 import time
 import json
-import torch
-
-from pathlib import Path
-from transformers import WhisperForConditionalGeneration, AutoProcessor
-
 from utils.lang_functions import detect_lang
 from utils.stt_functions import process_stt
 from utils.srt_functions import json_to_srt_transcription
 
-from utils.audio_extractor import extract_audio_from_video
+# TRANSCRIPTION process - app
+# This program is used for transcription
 
+# How to run the script with a video file path and source lang arguments in you console :
+#   python API/app_transcription.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" en
+#   python API/app_transcription.py "./video/product_management.mp4" fr
+#   python API/app_transcription.py "~/Julie_Ng--Rain_rain_and_more_rain.mp4" en
 
+debug_mode = False # Debug mode setting
+OUTPUT_STT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt.json'))
 CURRENT_SRC_LANG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_current_src_lang.txt'))
 
 
-if __name__ == '__main__':
-  
-    if len(sys.argv) > 2:
-        video_path: str = sys.argv[1]
-        lang: str = sys.argv[2]
-        if not os.path.exists(video_path):
-            raise FileNotFoundError(f"Error: Please check '{video_path}' path.")
-    else:
-        raise ValueError("Missing video file path or video source language. Usage: python API/app_transcription.py <video_path> <language>")
+start_time = time.time()
 
-    str_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt.json'))
-    OUTPUT_STT_PATH = os.path.join(os.path.dirname(__file__), 'app_stt_output.json')
-    
-    start_time = time.time()
+# ↓ CHECK `video_path` and `lang`
+if len(sys.argv) > 2:
+    video_path: str = sys.argv[1]
+    lang: str = sys.argv[2]
+    if not os.path.exists(video_path):
+        raise FileNotFoundError(f"Error: Please check '{video_path}' path.")
+else:
+    raise ValueError("Missing video file path or source language. Usage: python API/app_transcription.py <video_path> <language>")
 
-    # STT Dependencies
-    model_id = "openai/whisper-base"
-    whisper_save_dir: str = str((Path.cwd() / "models/whisper-base").resolve())  # Change to whisper save dir
+# ↓
+# SPEECH-TO-TEXT (STT) PROCESS
+stt_result = process_stt(video_path, source_lang=lang)
 
-    whisper_processor = AutoProcessor.from_pretrained(f"{whisper_save_dir}/processor")
-    whisper_model = WhisperForConditionalGeneration.from_pretrained(f"{whisper_save_dir}/model")
+# ↓
+# Save STT output in JSON
+with open(OUTPUT_STT_PATH, 'w', encoding='utf-8') as json_file:
+    json.dump(stt_result, json_file, ensure_ascii=False, indent=4)
+print(f"\nJSON output STT saved in {OUTPUT_STT_PATH}")
 
-    device = torch.device("cpu")
-    whisper_model.to(device)
-    whisper_model.generation_config.forced_decoder_ids = None
+# ↓
+# AUTO DETECT LANG SOURCE
+src_lang = detect_lang(OUTPUT_STT_PATH)
+str_path_srt = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{src_lang}.srt'))
+str_path_json = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{src_lang}.json'))
 
-    transcription = process_stt(
-        video_path=video_path,
-        model=whisper_model,
-        processor=whisper_processor,
-        source_lang=lang,
-    )
+# ↓
+# SRT + JSON
+subtitles = json_to_srt_transcription(stt_result)
 
+with open(str_path_srt, "w", encoding="utf-8") as f:
+    f.write(subtitles)
+print(f"\nSRT output saved in {str_path_srt}")
 
-    subtitles = json_to_srt_transcription(transcription)
-    with open(str_path, "w", encoding="utf-8") as f:
-        f.write(subtitles)
-    print(f"\nSRT output saved in {str_path}")
-
-    # ↓
-    # Save STT output in JSON
-    with open(OUTPUT_STT_PATH, 'w', encoding='utf-8') as json_file:
-        json.dump(transcription, json_file, ensure_ascii=False, indent=4)
-    print(f"\nJSON output STT saved in {OUTPUT_STT_PATH}")
-    
-    src_lang = detect_lang(OUTPUT_STT_PATH)
-    
-    # ↓
-    # SAVE DETECTED LANG SOURCE
-    with open(CURRENT_SRC_LANG_PATH, 'w', encoding='utf-8') as text_file:
-        text_file.write(src_lang)
-    print(f"\nCurrent source language '{src_lang}' saved in text file {CURRENT_SRC_LANG_PATH}")
+with open(str_path_json, "w", encoding='utf-8') as json_file:
+    json.dump(stt_result, json_file, ensure_ascii=False, indent=4)
+print(f"\nJSON output saved in {str_path_json}")
 
 
-    print(f"\nTRANSCRIPTION SCRIPT process took {int((time.time() - start_time) // 60)} minutes and {int((time.time() - start_time) % 60)} seconds")
+# ↓
+# SAVE DETECTED LANG SOURCE
+with open(CURRENT_SRC_LANG_PATH, 'w', encoding='utf-8') as text_file:
+    text_file.write(src_lang)
+print(f"\nCurrent source language '{src_lang}' saved in text file {CURRENT_SRC_LANG_PATH}")
+
+
+print(f"\nTRANSCRIPTION SCRIPT process took {int((time.time() - start_time) // 60)} minutes and {int((time.time() - start_time) % 60)} seconds")
