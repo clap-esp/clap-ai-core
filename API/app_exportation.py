@@ -5,12 +5,14 @@ import time
 import subprocess
 
 # EXPORT DERUSHED VIDEO process - app
-# This program is used to generate a "derushed" video (i.e., cuts validated by the user)
+# This program is used to export a final "derushed" video
 
-# How to run the script in your console (example):
-#   python API/app_exportation.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" "mp4" "16:9" "libx264" "path-de-destination"
-#   python API/app_exportation.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" "mov" "4:3" "prores"
-#   python API/app_exportation.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" "avi" "16:9" "mpeg4"
+# How to run the script in your console
+# python app_exportation.py <video_source_path> <output_format> <aspect_ratio> <video_export_dir_path>
+# Examples:
+#   python app_exportation.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" "mp4" "16:9" "./video"
+#   python app_exportation.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" "mov" "4:3" "./video"
+#   python app_exportation.py "./video/Julie_Ng--Rain_rain_and_more_rain.mp4" "avi" "16:9" "./video"
 
 USER_CUTS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'user_cuts.json'))
 
@@ -21,23 +23,22 @@ start_time = time.time()
 # ↓ CHECK ARGS
 if len(sys.argv) < 5:
     raise ValueError(
-        "\nMissing arguments. \n"
-        "Usage: python API/app_export_derush.py <video_path> <output_format> <aspect_ratio> <codec>\n"
-        "Example: python API/app_export_derush.py \"./video/sample.mp4\" \"mp4\" \"16:9\" \"libx264\""
+        "\nInsufficient arguments\n"
+        "Usage: python app_exportation.py <video_source_path> <output_format> <aspect_ratio> <video_export_dir_path>\n"
     )
 
-video_path = sys.argv[1]
-output_format = sys.argv[2]
-video_aspect_ratio = sys.argv[3]
-video_codec = sys.argv[4]  # codec vidéo
+video_path = sys.argv[1]             # Path to source video
+output_format = sys.argv[2]          # Output format (mp4, mov, avi, etc.)
+video_aspect_ratio = sys.argv[3]     # Aspect ratio (16:9, 4:3, etc.)
+export_dir = sys.argv[4]             # Directory for exporting the video
 
 # ↓ CHECK VIDEO_PATH
 if not os.path.exists(video_path):
-    raise FileNotFoundError(f"Error: Please check '{video_path}' path.")
+    raise FileNotFoundError(f"NotFoundError: Please check '{video_path}'")
 
 # ↓ READ CUTS
 if not os.path.exists(USER_CUTS_PATH):
-    raise FileNotFoundError(f"Error: Please check '{USER_CUTS_PATH}' path.")
+    raise FileNotFoundError(f"NotFoundError: user_cuts.json file not found '{USER_CUTS_PATH}'")
 
 with open(USER_CUTS_PATH, 'r', encoding='utf-8') as json_file:
     selected_cuts = json.load(json_file)
@@ -45,8 +46,8 @@ with open(USER_CUTS_PATH, 'r', encoding='utf-8') as json_file:
 if debug_mode:
     print(f"\n[DEBUG] Selected cuts => {selected_cuts}")
 
-# ↓ CREATE EXPORT FOLDERS IF NEEDED
-exports_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports'))
+# ↓ CREATE EXPORT FOLDERS
+exports_dir = os.path.abspath(export_dir)
 os.makedirs(exports_dir, exist_ok=True)
 tmp_dir = os.path.abspath(os.path.join(exports_dir, 'tmp_segments'))
 os.makedirs(tmp_dir, exist_ok=True)
@@ -75,7 +76,6 @@ with open(segment_list_file, 'w', encoding='utf-8') as f_concat:
             "-i", video_path,
             "-t", str(duration),
             "-aspect", video_aspect_ratio,
-            "-c:v", video_codec,
             "-c:a", "aac",
             "-strict", "experimental",
             segment_path
@@ -110,7 +110,7 @@ subprocess.run(cmd_concat, check=True)
 print(f"\nDerushed video exported => {output_file_path}")
 
 # ↓ CLEAN-UP (AFTER...)
-# import shutil
-# shutil.rmtree(tmp_dir, ignore_errors=True)
+import shutil
+shutil.rmtree(tmp_dir, ignore_errors=True)
 
 print(f"\nEXPORT DERUSHED VIDEO SCRIPT took {int((time.time() - start_time) // 60)} minutes and {int((time.time() - start_time) % 60)} seconds")
