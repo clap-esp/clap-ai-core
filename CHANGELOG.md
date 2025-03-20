@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.0](https://github.com/clap-esp/clap-ai-core/compare/v1.2.1...v1.3.0) (2025-03-20)
+
+
+### Features
+
+* documentation in ADR for video exportation ([4362e08](https://github.com/clap-esp/clap-ai-core/commit/4362e08a2291aede821a89913f3edac008f34583))
+* **exportation:** first implementation of exportation video ([492a917](https://github.com/clap-esp/clap-ai-core/commit/492a91756dc66bba6ef820e636071f6d371a8eef))
+* script video exportation ([77cab98](https://github.com/clap-esp/clap-ai-core/commit/77cab98c541e892b52e4349248723a0789663a71))
+
 ## [1.2.1](https://github.com/clap-esp/clap-ai-core/compare/v1.2.0...v1.2.1) (2025-03-10)
 
 
