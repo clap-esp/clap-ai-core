@@ -44,37 +44,38 @@ def translate_str_and_json(input_path, srt_output_path, json_output_path, src_la
     with open(input_path, 'r', encoding='utf-8') as file:
         json_input = json.load(file)
 
-    # Extraction of texts to translate
+    # Extract texts to translate
     texts_to_translate = [entry["text"] for entry in json_input]
-    log(f"\n---> texts_to_translate")
-    log(texts_to_translate)
 
-    # Preparing inputs for translation
-    inputs = tokenizer(texts_to_translate, return_tensors="pt", padding=True, truncation=True, max_length=max_length).to("cpu")
-    outputs = model.generate(**inputs, max_length=max_length, forced_bos_token_id=forced_bos_token_id)
+    CHUNK_SIZE = 200  # maximum lines per batch
+    translated_texts = []
 
-    # Decoding of translated texts
-    translated_texts = [tokenizer.decode(g, skip_special_tokens=True) for g in outputs]
-    log(f"\n---> Translated_texts")
-    log(translated_texts)
+    for i in range(0, len(texts_to_translate), CHUNK_SIZE):
+        chunk_texts = texts_to_translate[i : i + CHUNK_SIZE]
 
-    # Reintegration of translated texts into the original JSON
-    translation_index = 0
-    for entry in json_input:
-        entry["text"] = translated_texts[translation_index]
-        translation_index += 1
-    log(f"\n---> json_input")
-    log(json_input)
+        # Prepare inputs for translation
+        inputs = tokenizer(chunk_texts, return_tensors="pt", padding=True, truncation=True, max_length=max_length).to("cpu")
 
-    # Converting translated JSON to SRT format using the json_to_srt_transcription function
+        # Perform translation on the chunk
+        outputs = model.generate(**inputs,max_length=max_length,forced_bos_token_id=forced_bos_token_id)
+
+        # Decode and accumulate results
+        chunk_translated = [tokenizer.decode(g, skip_special_tokens=True) for g in outputs]
+        translated_texts.extend(chunk_translated)
+
+    # Reintegrate translated texts into the original JSON
+    for entry, translated_line in zip(json_input, translated_texts):
+        entry["text"] = translated_line
+
+    # Convert translated JSON to SRT format
     srt_result = json_to_srt_transcription(json_input)
     
-    # Saving SRT result to output file
+    # Save SRT result
     with open(srt_output_path, 'w', encoding='utf-8') as srt_file:
         srt_file.write(srt_result)
     print(f"\nSRT output file saved in {srt_output_path}")
 
-    # Saving JSON result to output file
+    # Save JSON result
     with open(json_output_path, 'w', encoding='utf-8') as json_file:
         json.dump(json_input, json_file, ensure_ascii=False, indent=4)
     print(f"\nJSON output file saved in {json_output_path}")
