@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/clap-esp/clap-ai-core/compare/v1.3.0...v1.4.0) (2025-04-04)
+
+
+### Features
+
+* **validation dataset:** ajout de fonction de tests et d'un job ci ([f8901c4](https://github.com/clap-esp/clap-ai-core/commit/f8901c422cf70b31dc9f2ad31c55ab3932092eaa))
+
+
+### Bug Fixes
+
+* **translation:** need to cut token - every 200 lines ([991c332](https://github.com/clap-esp/clap-ai-core/commit/991c3322d908e4302fdf645b40de4bc9cd2ecd32))
+
 ## [1.3.0](https://github.com/clap-esp/clap-ai-core/compare/v1.2.1...v1.3.0) (2025-03-20)
 
 
