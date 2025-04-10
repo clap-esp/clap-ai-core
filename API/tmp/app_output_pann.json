@@ -1,0 +1,476 @@
+[
+    {
+        "label": "Music",
+        "time_start": 1.0,
+        "time_end": 2.0,
+        "confidence": 0.7379623055458069
+    },
+    {
+        "label": "Music",
+        "time_start": 22.0,
+        "time_end": 23.0,
+        "confidence": 0.8736046552658081
+    },
+    {
+        "label": "Speech",
+        "time_start": 23.0,
+        "time_end": 29.0,
+        "confidence": 0.7705197930335999
+    },
+    {
+        "label": "Music",
+        "time_start": 29.0,
+        "time_end": 32.0,
+        "confidence": 0.8666396141052246
+    },
+    {
+        "label": "Speech",
+        "time_start": 32.0,
+        "time_end": 203.0,
+        "confidence": 0.8178249597549438
+    },
+    {
+        "label": "Music",
+        "time_start": 203.0,
+        "time_end": 205.0,
+        "confidence": 0.8870573043823242
+    },
+    {
+        "label": "Speech",
+        "time_start": 205.0,
+        "time_end": 229.0,
+        "confidence": 0.8496931791305542
+    },
+    {
+        "label": "Music",
+        "time_start": 229.0,
+        "time_end": 233.0,
+        "confidence": 0.8191308975219727
+    },
+    {
+        "label": "Speech",
+        "time_start": 233.0,
+        "time_end": 572.0,
+        "confidence": 0.8464078903198242
+    },
+    {
+        "label": "Music",
+        "time_start": 572.0,
+        "time_end": 573.0,
+        "confidence": 0.8582305312156677
+    },
+    {
+        "label": "Speech",
+        "time_start": 573.0,
+        "time_end": 752.0,
+        "confidence": 0.8599493503570557
+    },
+    {
+        "label": "Music",
+        "time_start": 752.0,
+        "time_end": 753.0,
+        "confidence": 0.7190173864364624
+    },
+    {
+        "label": "Speech",
+        "time_start": 753.0,
+        "time_end": 798.0,
+        "confidence": 0.8364636898040771
+    },
+    {
+        "label": "Music",
+        "time_start": 798.0,
+        "time_end": 799.0,
+        "confidence": 0.6850363612174988
+    },
+    {
+        "label": "Speech",
+        "time_start": 799.0,
+        "time_end": 876.0,
+        "confidence": 0.8860824108123779
+    },
+    {
+        "label": "Music",
+        "time_start": 876.0,
+        "time_end": 877.0,
+        "confidence": 0.7537850737571716
+    },
+    {
+        "label": "Speech",
+        "time_start": 877.0,
+        "time_end": 1039.0,
+        "confidence": 0.8778437376022339
+    },
+    {
+        "label": "Music",
+        "time_start": 1039.0,
+        "time_end": 1040.0,
+        "confidence": 0.7808764576911926
+    },
+    {
+        "label": "Speech",
+        "time_start": 1040.0,
+        "time_end": 1050.0,
+        "confidence": 0.8669960498809814
+    },
+    {
+        "label": "Neigh, whinny",
+        "time_start": 1050.0,
+        "time_end": 1051.0,
+        "confidence": 0.7220761775970459
+    },
+    {
+        "label": "Speech",
+        "time_start": 1051.0,
+        "time_end": 1093.0,
+        "confidence": 0.8491911888122559
+    },
+    {
+        "label": "Music",
+        "time_start": 1093.0,
+        "time_end": 1094.0,
+        "confidence": 0.7950853705406189
+    },
+    {
+        "label": "Speech",
+        "time_start": 1094.0,
+        "time_end": 1193.0,
+        "confidence": 0.7306569814682007
+    },
+    {
+        "label": "Music",
+        "time_start": 1193.0,
+        "time_end": 1194.0,
+        "confidence": 0.8123922348022461
+    },
+    {
+        "label": "Speech",
+        "time_start": 1194.0,
+        "time_end": 1221.0,
+        "confidence": 0.8831256031990051
+    },
+    {
+        "label": "Music",
+        "time_start": 1221.0,
+        "time_end": 1222.0,
+        "confidence": 0.7801870107650757
+    },
+    {
+        "label": "Speech",
+        "time_start": 1223.0,
+        "time_end": 1271.0,
+        "confidence": 0.7984204888343811
+    },
+    {
+        "label": "Music",
+        "time_start": 1271.0,
+        "time_end": 1272.0,
+        "confidence": 0.8859203457832336
+    },
+    {
+        "label": "Speech",
+        "time_start": 1272.0,
+        "time_end": 1371.0,
+        "confidence": 0.8517207503318787
+    },
+    {
+        "label": "Music",
+        "time_start": 1371.0,
+        "time_end": 1373.0,
+        "confidence": 0.8692751526832581
+    },
+    {
+        "label": "Speech",
+        "time_start": 1373.0,
+        "time_end": 1424.0,
+        "confidence": 0.8602488040924072
+    },
+    {
+        "label": "Music",
+        "time_start": 1424.0,
+        "time_end": 1425.0,
+        "confidence": 0.863196849822998
+    },
+    {
+        "label": "Speech",
+        "time_start": 1425.0,
+        "time_end": 1792.0,
+        "confidence": 0.8266236186027527
+    },
+    {
+        "label": "Music",
+        "time_start": 1792.0,
+        "time_end": 1793.0,
+        "confidence": 0.8029775023460388
+    },
+    {
+        "label": "Speech",
+        "time_start": 1793.0,
+        "time_end": 2160.0,
+        "confidence": 0.8507174849510193
+    },
+    {
+        "label": "Music",
+        "time_start": 2160.0,
+        "time_end": 2161.0,
+        "confidence": 0.7807251811027527
+    },
+    {
+        "label": "Speech",
+        "time_start": 2161.0,
+        "time_end": 2445.0,
+        "confidence": 0.8651424646377563
+    },
+    {
+        "label": "Music",
+        "time_start": 2445.0,
+        "time_end": 2446.0,
+        "confidence": 0.8285199403762817
+    },
+    {
+        "label": "Speech",
+        "time_start": 2446.0,
+        "time_end": 2895.0,
+        "confidence": 0.7876393795013428
+    },
+    {
+        "label": "Neigh, whinny",
+        "time_start": 2895.0,
+        "time_end": 2896.0,
+        "confidence": 0.7245956659317017
+    },
+    {
+        "label": "Speech",
+        "time_start": 2896.0,
+        "time_end": 2981.0,
+        "confidence": 0.8120086193084717
+    },
+    {
+        "label": "Music",
+        "time_start": 2981.0,
+        "time_end": 2982.0,
+        "confidence": 0.7536697387695312
+    },
+    {
+        "label": "Speech",
+        "time_start": 2982.0,
+        "time_end": 2983.0,
+        "confidence": 0.8562532663345337
+    },
+    {
+        "label": "Music",
+        "time_start": 2983.0,
+        "time_end": 2984.0,
+        "confidence": 0.8936207294464111
+    },
+    {
+        "label": "Speech",
+        "time_start": 2984.0,
+        "time_end": 3032.0,
+        "confidence": 0.8542503118515015
+    },
+    {
+        "label": "Music",
+        "time_start": 3032.0,
+        "time_end": 3033.0,
+        "confidence": 0.856041669845581
+    },
+    {
+        "label": "Speech",
+        "time_start": 3033.0,
+        "time_end": 3182.0,
+        "confidence": 0.8681713938713074
+    },
+    {
+        "label": "Music",
+        "time_start": 3182.0,
+        "time_end": 3184.0,
+        "confidence": 0.7413913607597351
+    },
+    {
+        "label": "Speech",
+        "time_start": 3184.0,
+        "time_end": 3351.0,
+        "confidence": 0.8017449975013733
+    },
+    {
+        "label": "Grunt",
+        "time_start": 3351.0,
+        "time_end": 3352.0,
+        "confidence": 0.5171594619750977
+    },
+    {
+        "label": "Speech",
+        "time_start": 3352.0,
+        "time_end": 3490.0,
+        "confidence": 0.8039098381996155
+    },
+    {
+        "label": "Animal",
+        "time_start": 3490.0,
+        "time_end": 3491.0,
+        "confidence": 0.5670316219329834
+    },
+    {
+        "label": "Speech",
+        "time_start": 3492.0,
+        "time_end": 3519.0,
+        "confidence": 0.7246347665786743
+    },
+    {
+        "label": "Grunt",
+        "time_start": 3519.0,
+        "time_end": 3520.0,
+        "confidence": 0.5537437796592712
+    },
+    {
+        "label": "Speech",
+        "time_start": 3520.0,
+        "time_end": 3788.0,
+        "confidence": 0.8399863839149475
+    },
+    {
+        "label": "Music",
+        "time_start": 3788.0,
+        "time_end": 3789.0,
+        "confidence": 0.7922430038452148
+    },
+    {
+        "label": "Speech",
+        "time_start": 3789.0,
+        "time_end": 3807.0,
+        "confidence": 0.8440143465995789
+    },
+    {
+        "label": "Music",
+        "time_start": 3807.0,
+        "time_end": 3808.0,
+        "confidence": 0.8163647055625916
+    },
+    {
+        "label": "Speech",
+        "time_start": 3808.0,
+        "time_end": 4405.0,
+        "confidence": 0.8380370736122131
+    },
+    {
+        "label": "Music",
+        "time_start": 4405.0,
+        "time_end": 4406.0,
+        "confidence": 0.8304621577262878
+    },
+    {
+        "label": "Car",
+        "time_start": 4406.0,
+        "time_end": 4407.0,
+        "confidence": 0.6756113171577454
+    },
+    {
+        "label": "Speech",
+        "time_start": 4408.0,
+        "time_end": 4416.0,
+        "confidence": 0.872332751750946
+    },
+    {
+        "label": "Music",
+        "time_start": 4416.0,
+        "time_end": 4417.0,
+        "confidence": 0.505919337272644
+    },
+    {
+        "label": "Speech",
+        "time_start": 4417.0,
+        "time_end": 4549.0,
+        "confidence": 0.8068481087684631
+    },
+    {
+        "label": "Burping, eructation",
+        "time_start": 4550.0,
+        "time_end": 4551.0,
+        "confidence": 0.5306013226509094
+    },
+    {
+        "label": "Speech",
+        "time_start": 4551.0,
+        "time_end": 4604.0,
+        "confidence": 0.8062841296195984
+    },
+    {
+        "label": "Music",
+        "time_start": 4604.0,
+        "time_end": 4605.0,
+        "confidence": 0.6456854939460754
+    },
+    {
+        "label": "Speech",
+        "time_start": 4605.0,
+        "time_end": 4731.0,
+        "confidence": 0.8211274743080139
+    },
+    {
+        "label": "Music",
+        "time_start": 4731.0,
+        "time_end": 4732.0,
+        "confidence": 0.723738431930542
+    },
+    {
+        "label": "Speech",
+        "time_start": 4732.0,
+        "time_end": 4808.0,
+        "confidence": 0.8128030896186829
+    },
+    {
+        "label": "Animal",
+        "time_start": 4808.0,
+        "time_end": 4809.0,
+        "confidence": 0.7267576456069946
+    },
+    {
+        "label": "Speech",
+        "time_start": 4809.0,
+        "time_end": 4922.0,
+        "confidence": 0.8597584962844849
+    },
+    {
+        "label": "Music",
+        "time_start": 4922.0,
+        "time_end": 4923.0,
+        "confidence": 0.7834296822547913
+    },
+    {
+        "label": "Speech",
+        "time_start": 4923.0,
+        "time_end": 4983.0,
+        "confidence": 0.8100556135177612
+    },
+    {
+        "label": "Music",
+        "time_start": 4983.0,
+        "time_end": 4984.0,
+        "confidence": 0.7531399726867676
+    },
+    {
+        "label": "Speech",
+        "time_start": 4984.0,
+        "time_end": 5000.0,
+        "confidence": 0.8493929505348206
+    },
+    {
+        "label": "Music",
+        "time_start": 5000.0,
+        "time_end": 5001.0,
+        "confidence": 0.7953606843948364
+    },
+    {
+        "label": "Speech",
+        "time_start": 5001.0,
+        "time_end": 5437.0,
+        "confidence": 0.8473828434944153
+    },
+    {
+        "label": "Music",
+        "time_start": 5437.0,
+        "time_end": 5480.0,
+        "confidence": 0.8933436870574951
+    }
+]

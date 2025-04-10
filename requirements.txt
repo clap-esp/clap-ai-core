@@ -25,9 +25,14 @@ sentencepiece==0.2.0
 langdetect==1.0.9
 
 # audio / video manipulation
-pydub==0.25.1 
+pydub==0.25.1
 librosa==0.10.2.post1
 moviepy==1.0.3
 
 # srt
 pysrt==1.1.2
+
+# noise recognition
+numpy==2.0.2
+moviepy==1.0.3
+panns_inference==0.1.0
