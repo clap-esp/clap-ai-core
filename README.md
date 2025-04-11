@@ -13,6 +13,8 @@ clap-ai-core/
 │   └── exports /
 ├── data/
 │   └── ...  # Contient les datasets utilisés pour l'entraînement ou l'évaluation des modèles
+├── metrics/
+│   └── ...  # Contient des notbooks finetuning + XAI
 └── requirements.txt  # Liste des lib nécessaires pour exécuter le projet
 ```
 
@@ -68,7 +70,7 @@ python test_dev_translate.py el
 ```
 
 **Pour executer un fichier \*.ipynb**  
--> choisir le Kernel env(Python 3.11.x) -> env/Scripts/python.exe
+-> choisir le Kernel env(Python 3.11.x)
 
 ### Contribuer
 
@@ -81,14 +83,37 @@ Ce fichier contient les secrets (ex clé d'API). Il ne doit jamais être push su
 
 ## Fonctionnalités
 
-1. Speech to Text
-2. NER
-   🚧 en construction ...
+### 1. Transcription
+
+🗣️📝 **STT**  
+---- _Speech to Text_  
+Model --> _whisper-base_
+
+🔊🎯 **SED**  
+---- _Sound Event Detection_  
+Model --> _PANN CNN14_
+
+### 2. Derush
+
+🧾🔍 **NER**  
+---- _Name Entity Recognision_  
+Model --> _bert-base-multilingual-cased_  
+Étude --> [détail des classes](ADR/TA-derush.md)
+
+### 3. Traduction
+
+🌐🔁 MT  
+---- _Machine Translation_  
+Model --> _M2M100_  
+Étude --> [comparative pour fonction de traduction](ADR/TA-translation.md)
+
+### 4. Exportation
+
+Doc --> [détail du script](ADR/TA-exportation-video.md)
 
 ## Architerture
 
-🚧 en construction ...
-Le script app.py génère un fichier final_format.json disponible pour l'UI
+![archi](ADR/avril-2025__shema_archi_core_ai.png)
 
 ## Dataset
 
