@@ -82,34 +82,34 @@ def translate_str_and_json(input_path, srt_output_path, json_output_path, src_la
 
 
 
-def detect_lang(input_path):
-    """
-    Detects the language  using `langdetect` of text in the output STT JSON file
-    Reads the file and extracts the first 15 non-empty text entries
-    Returns str: language code (e.g., "en", "fr") or "unknown" if insufficient text
-    """
-    print("\nDetecting language...")
-    if not os.path.isfile(input_path):
-        print(f"The file {input_path} does not exist.")
-        exit(1)
-    else:
-        # Check if the file is empty
-        if os.path.getsize(input_path) == 0:
-            print(f"The file {input_path} is empty. Please regenerate the transcription")
-            exit(1)
+# def detect_lang(input_path):
+#     """
+#     Detects the language  using `langdetect` of text in the output STT JSON file
+#     Reads the file and extracts the first 15 non-empty text entries
+#     Returns str: language code (e.g., "en", "fr") or "unknown" if insufficient text
+#     """
+#     print("\nDetecting language...")
+#     if not os.path.isfile(input_path):
+#         print(f"The file {input_path} does not exist.")
+#         exit(1)
+#     else:
+#         # Check if the file is empty
+#         if os.path.getsize(input_path) == 0:
+#             print(f"The file {input_path} is empty. Please regenerate the transcription")
+#             exit(1)
     
-    with open(input_path, "r", encoding="utf-8") as f:
-        json_data = json.load(f)
+#     with open(input_path, "r", encoding="utf-8") as f:
+#         json_data = json.load(f)
 
-    first_ten_texts = [item["text"] for item in json_data[:15] if item["text"].strip()]
+#     first_ten_texts = [item["text"] for item in json_data[:15] if item["text"].strip()]
 
-    if first_ten_texts:
-        combined_text = " ".join(first_ten_texts)
-        lang_detected = detect(combined_text)
-        lang = lang_detected
-        print(f"💬 Detected language: {lang}")
-    else:
-        lang = "unknown"
-        print("Not enough text to detect the language")
+#     if first_ten_texts:
+#         combined_text = " ".join(first_ten_texts)
+#         lang_detected = detect(combined_text)
+#         lang = lang_detected
+#         print(f"💬 Detected language: {lang}")
+#     else:
+#         lang = "unknown"
+#         print("Not enough text to detect the language")
 
-    return lang
+#     return lang

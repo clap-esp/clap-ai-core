@@ -2,12 +2,9 @@ import os
 import sys
 import json
 import time
-import torch
 from utils.lang_functions import detect_lang
 from utils.stt_functions import process_stt
 from utils.srt_functions import json_to_srt_transcription
-from pathlib import Path
-from transformers import WhisperForConditionalGeneration, AutoProcessor
 
 
 # TRANSCRIPTION process - test
@@ -22,7 +19,7 @@ from transformers import WhisperForConditionalGeneration, AutoProcessor
 
 debug_mode = True  # Debug mode setting
 OUTPUT_STT_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_output_stt.json')
-CURRENT_SRC_LANG_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_current_src_lang.txt')
+CURRENT_LANG_PATH = os.path.join(os.path.dirname(__file__), 'tmp_test', 'test_current_lang.txt')
 
 
 # ↓ CHECK `video_path` and `lang`
@@ -34,6 +31,7 @@ if len(sys.argv) > 2:
 else:
     raise ValueError("Missing video file path or source language. Usage: python API/app_transcription.py <video_path> <language>")
 
+print(f"lang: {lang}")
 
 # ↓
 # SPEECH-TO-TEXT (STT) PROCESS
@@ -46,11 +44,10 @@ print(f"\n⏰ SPEECH-TO-TEXT process took {time.time() - start_time:.2f} seconds
 
 
 # ↓
-# AUTO DETECT LANG SOURCE
+# LANG SOURCE for output
 start_time = time.time()
-src_lang = detect_lang(OUTPUT_STT_PATH)
-str_path_srt = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{src_lang}.srt')
-str_path_json = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{src_lang}.json')
+str_path_srt = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{lang}.srt')
+str_path_json = os.path.join(os.path.dirname(__file__), f'tmp_test/test_subtitles_{lang}.json')
 print(f"srt_path: {str_path_srt}")
 print(f"\n⏰ AUTO DETECT LANG process took {time.time() - start_time:.2f} seconds")
 
@@ -84,8 +81,8 @@ print(f"📥 JSON output STT saved in {OUTPUT_STT_PATH}")
 # ↓
 # SAVE DETECTED LANG SOURCE
 start_time = time.time()
-with open(CURRENT_SRC_LANG_PATH, 'w', encoding='utf-8') as text_file:
-    text_file.write(src_lang)
+with open(CURRENT_LANG_PATH, 'w', encoding='utf-8') as text_file:
+    text_file.write(lang)
 print(f"\n⏰ Save Current Source Language in text file took {time.time() - start_time:.2f} seconds")
-print(f"📥 Text file Current source language '{src_lang}' saved in {CURRENT_SRC_LANG_PATH}")
+print(f"📥 Text file Current source language '{lang}' saved in {CURRENT_LANG_PATH}")
 
