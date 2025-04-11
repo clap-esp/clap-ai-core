@@ -3,8 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pandas as pd
+import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.preprocessing import label_binarize
+from sklearn.metrics import roc_curve, auc
 
 
 def load_data(train_file, test_file):
@@ -15,7 +18,7 @@ def load_data(train_file, test_file):
 def prepare_labels(unique_labels):
     label_encoder = LabelEncoder()
     label_encoder.fit(unique_labels)
-    print("Mapping labels and IDs: ", {label: idx for idx, label in enumerate(label_encoder.classes_)})
+    print("Mapping labels and IDs:\n", {label: idx for idx, label in enumerate(label_encoder.classes_)})
     return label_encoder
 
 def evaluate_model(model, test_tokens, test_labels):
@@ -100,7 +103,7 @@ def encode_data(data, tokenizer, label_encoder, max_length=36):
             label_list = label_encoder.inverse_transform(label_ids)
             print("- Labels after encodage: ", label_list)
 
-    print("\n// Encodage terminé")
+    print("\n// Encoding completed //\n")
     return np.array(tokens), np.array(labels)
 
 
@@ -110,10 +113,10 @@ def get_metrics(y_true, y_pred, labels):
     y_pred_flat = [label for sublist in y_pred for label in sublist]
 
     cm = confusion_matrix(y_true_flat, y_pred_flat, labels=range(len(labels)))
-    print("\nConfusion Matrix:")
+    print("\nConfusion matrix:")
     print(cm)
 
-    print("\nConfusion Matrix with %:")
+    print("\nConfusion matrix with percent:")
     cm_norm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 
     plt.figure(figsize=(10, 8))
@@ -125,5 +128,77 @@ def get_metrics(y_true, y_pred, labels):
     plt.yticks(fontsize=10, fontweight='normal')
     plt.show()
 
-    print("\nRapport de Classification :")
+    print("\nClassification report:")
     print(classification_report(y_true_flat, y_pred_flat, target_names=labels))
+
+
+def plot_training_history(history):
+    """
+    Displays the evolution of accuracy and loss over time from a History object
+    """
+    print("\nEvolution of accuracy and loss over the epoch:")
+    if history is not None:
+        plt.figure(figsize=(12, 5))
+
+        # accuracy
+        plt.subplot(1, 2, 1)
+        plt.plot(history.history['accuracy'], label='Training accuracy', marker='o')
+        plt.plot(history.history['val_accuracy'], label='Validation accuracy', marker='o')
+        plt.title('Model accuracy over epochs')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.legend()
+
+        # loss
+        plt.subplot(1, 2, 2)
+        plt.plot(history.history['loss'], label='Training loss', marker='o')
+        plt.plot(history.history['val_loss'], label='Validation loss', marker='o')
+        plt.title('Model loss over epochs')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.legend()
+
+        plt.tight_layout()
+        plt.show()
+
+def get_ROC_curve(true_labels, logits, unique_labels):
+    """
+    Generate and display ROC curves for each class, as well as a micro-average
+    for the true_labels (in [batch, sequence_length] format) and the raw logits
+    of the model (in [batch, sequence_length, num_classes] format).
+    """    
+    y_true_flat = true_labels.reshape(-1)
+    probabilities = tf.nn.softmax(logits, axis=-1).numpy()
+    num_classes = len(unique_labels)
+    probabilities = probabilities.reshape(-1, num_classes)
+    y_true_bin = label_binarize(y_true_flat, classes=range(num_classes))
+    
+    fpr = {}
+    tpr = {}
+    roc_auc = {}
+    
+    for i in range(num_classes):
+        fpr[i], tpr[i], _ = roc_curve(y_true_bin[:, i], probabilities[:, i])
+        roc_auc[i] = auc(fpr[i], tpr[i])
+    
+    fpr["micro"], tpr["micro"], _ = roc_curve(y_true_bin.ravel(), probabilities.ravel())
+    roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
+    
+    # Affichage
+    print("\nROC AUC curve:")
+    plt.figure(figsize=(8, 6))
+    
+    plt.plot(fpr["micro"], tpr["micro"], 
+             label='micro-average (AUC = {0:0.2f})'.format(roc_auc["micro"]))
+    
+    for i, label_name in enumerate(unique_labels):
+        plt.plot(fpr[i], tpr[i],
+                 label='{} (AUC = {:0.2f})'.format(label_name, roc_auc[i]))
+    
+    plt.plot([0, 1], [0, 1], 'r--', lw=2)
+    
+    plt.title("Courbes ROC multiclasse (One-vs-Rest)")
+    plt.xlabel("Taux de Faux Positifs (FPR)", fontsize=12)
+    plt.ylabel("Taux de Vrais Positifs (TPR)", fontsize=12)
+    plt.legend(loc="lower right", fontsize=9)
+    plt.show()

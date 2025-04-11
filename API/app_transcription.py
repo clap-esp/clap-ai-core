@@ -2,7 +2,6 @@ import os
 import sys
 import time
 import json
-from utils.lang_functions import detect_lang
 from utils.stt_functions import process_stt
 from utils.srt_functions import json_to_srt_transcription
 
@@ -30,6 +29,7 @@ if len(sys.argv) > 2:
 else:
     raise ValueError("Missing video file path or source language. Usage: python API/app_transcription.py <video_path> <language>")
 
+print(f"lang: {lang}")
 # ↓
 # SPEECH-TO-TEXT (STT) PROCESS
 stt_result = process_stt(video_path, source_lang=lang)
@@ -41,10 +41,9 @@ with open(OUTPUT_STT_PATH, 'w', encoding='utf-8') as json_file:
 print(f"\nJSON output STT saved in {OUTPUT_STT_PATH}")
 
 # ↓
-# AUTO DETECT LANG SOURCE
-src_lang = detect_lang(OUTPUT_STT_PATH)
-str_path_srt = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{src_lang}.srt'))
-str_path_json = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{src_lang}.json'))
+# LANG SOURCE for output
+str_path_srt = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{lang}.srt'))
+str_path_json = os.path.abspath(os.path.join(os.path.dirname(__file__), 'exports', f'app_subtitles_{lang}.json'))
 
 # ↓
 # SRT + JSON
@@ -62,8 +61,8 @@ print(f"\nJSON output saved in {str_path_json}")
 # ↓
 # SAVE DETECTED LANG SOURCE
 with open(CURRENT_SRC_LANG_PATH, 'w', encoding='utf-8') as text_file:
-    text_file.write(src_lang)
-print(f"\nCurrent source language '{src_lang}' saved in text file {CURRENT_SRC_LANG_PATH}")
+    text_file.write(lang)
+print(f"\nCurrent source language '{lang}' saved in text file {CURRENT_SRC_LANG_PATH}")
 
 
 print(f"\nTRANSCRIPTION SCRIPT process took {int((time.time() - start_time) // 60)} minutes and {int((time.time() - start_time) % 60)} seconds")
