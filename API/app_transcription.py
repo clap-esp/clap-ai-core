@@ -4,6 +4,8 @@ import time
 import json
 from utils.stt_functions import process_stt
 from utils.srt_functions import json_to_srt_transcription
+from utils.detect_audio_events import extract_audio_from_video, detect_audio_events
+from utils.merge_stt_pann import merge_stt_and_pann
 
 # TRANSCRIPTION process - app
 # This program is used for transcription
@@ -16,6 +18,10 @@ from utils.srt_functions import json_to_srt_transcription
 debug_mode = False # Debug mode setting
 OUTPUT_STT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt.json'))
 CURRENT_SRC_LANG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_current_src_lang.txt'))
+OUTPUT_PANN_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_pann.json'))
+AUDIO_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'extracted_audio.wav'))
+MERGED_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp', 'app_output_stt_merged.json'))
+
 
 
 start_time = time.time()
@@ -39,6 +45,16 @@ stt_result = process_stt(video_path, source_lang=lang)
 with open(OUTPUT_STT_PATH, 'w', encoding='utf-8') as json_file:
     json.dump(stt_result, json_file, ensure_ascii=False, indent=4)
 print(f"\nJSON output STT saved in {OUTPUT_STT_PATH}")
+
+# ↓
+# PANN PROCESS
+extract_audio_from_video(video_path, AUDIO_PATH)
+detect_audio_events(AUDIO_PATH, OUTPUT_PANN_PATH, threshold=0.5)
+# os.system(f"python detect_audio_events.py {video_path} {OUTPUT_PANN_PATH}")
+
+# ↓
+# Merge STT and PANN JSON outputs
+merge_stt_and_pann(OUTPUT_STT_PATH, OUTPUT_PANN_PATH, MERGED_OUTPUT_PATH)
 
 # ↓
 # LANG SOURCE for output
